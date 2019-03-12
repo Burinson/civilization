@@ -11,12 +11,17 @@ class Civilization
 
 public:
     Civilization();
+    Civilization(const string &name, int x, int y);
     string getName() const;
     void setName(const string &value);
     int getX() const;
     void setX(int value);
     int getY() const;
     void setY(int value);
+
+    bool operator<(Civilization &c) {
+        return name < c.getName();
+    }
 };
 
 #endif // CIVILIZACION_H

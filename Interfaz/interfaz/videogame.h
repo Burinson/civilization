@@ -15,11 +15,15 @@ public:
     void setUsername(const string &value);
     void addCivilization(const Civilization &obj, size_t n);
     void createCivilizations(const Civilization &obj, size_t n);
-    void firstCivilization();
-    void lastCivilization();
+    Civilization firstCivilization();
+    Civilization lastCivilization();
     void sortCivilizations();
-    void deleteCivilization(const string target);
-    void total();
+    bool deleteCivilization(const string target);
+    size_t total();
+
+    Civilization& operator[](size_t n) {
+        return civilizations[n];
+    }
 };
 
 #endif // VIDEOGAME_H

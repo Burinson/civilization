@@ -34,3 +34,10 @@ Civilization::Civilization()
 {
 
 }
+
+Civilization::Civilization(const string &name, int x, int y)
+{
+    this->name = name;
+    this->x = x;
+    this->y = y;
+}
