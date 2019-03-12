@@ -20,7 +20,7 @@ public:
     void setY(int value);
 
     bool operator<(Civilization &c) {
-        return name < c.getName();
+        return x < c.getX();
     }
 };
 

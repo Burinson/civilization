@@ -128,7 +128,7 @@ void MainWindow::on_order_civilizations_submit_clicked()
 {
     if (videogame.total() > 0) {
         videogame.sortCivilizations();
-        qDebug() << "[✔] Civilizations ordered by name";
+        qDebug() << "[✔] Civilizations ordered by x axis";
     } else {
         QMessageBox::information(this, "Error", "There are no civilizations to order");
     }

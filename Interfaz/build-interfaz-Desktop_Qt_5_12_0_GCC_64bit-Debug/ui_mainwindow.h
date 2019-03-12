@@ -32,6 +32,9 @@ class Ui_MainWindow
 {
 public:
     QAction *actionType_here;
+    QAction *actionFile;
+    QAction *actionSave;
+    QAction *actionRecover;
     QWidget *centralWidget;
     QGridLayout *gridLayout;
     QTabWidget *tabWidget;
@@ -85,7 +88,6 @@ public:
     QStatusBar *statusBar;
     QMenuBar *menuBar;
     QMenu *menuRegister;
-    QMenu *menuRecover;
 
     void setupUi(QMainWindow *MainWindow)
     {
@@ -94,6 +96,12 @@ public:
         MainWindow->resize(881, 376);
         actionType_here = new QAction(MainWindow);
         actionType_here->setObjectName(QString::fromUtf8("actionType_here"));
+        actionFile = new QAction(MainWindow);
+        actionFile->setObjectName(QString::fromUtf8("actionFile"));
+        actionSave = new QAction(MainWindow);
+        actionSave->setObjectName(QString::fromUtf8("actionSave"));
+        actionRecover = new QAction(MainWindow);
+        actionRecover->setObjectName(QString::fromUtf8("actionRecover"));
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QString::fromUtf8("centralWidget"));
         gridLayout = new QGridLayout(centralWidget);
@@ -327,7 +335,6 @@ public:
         mainToolBar = new QToolBar(MainWindow);
         mainToolBar->setObjectName(QString::fromUtf8("mainToolBar"));
         MainWindow->addToolBar(Qt::TopToolBarArea, mainToolBar);
-        MainWindow->insertToolBarBreak(mainToolBar);
         statusBar = new QStatusBar(MainWindow);
         statusBar->setObjectName(QString::fromUtf8("statusBar"));
         MainWindow->setStatusBar(statusBar);
@@ -336,13 +343,12 @@ public:
         menuBar->setGeometry(QRect(0, 0, 881, 22));
         menuRegister = new QMenu(menuBar);
         menuRegister->setObjectName(QString::fromUtf8("menuRegister"));
-        menuRecover = new QMenu(menuBar);
-        menuRecover->setObjectName(QString::fromUtf8("menuRecover"));
         MainWindow->setMenuBar(menuBar);
 
         menuBar->addAction(menuRegister->menuAction());
-        menuBar->addAction(menuRecover->menuAction());
         menuRegister->addSeparator();
+        menuRegister->addAction(actionSave);
+        menuRegister->addAction(actionRecover);
 
         retranslateUi(MainWindow);
 
@@ -354,8 +360,11 @@ public:
 
     void retranslateUi(QMainWindow *MainWindow)
     {
-        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", nullptr));
+        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "Civilizations", nullptr));
         actionType_here->setText(QApplication::translate("MainWindow", "Type here", nullptr));
+        actionFile->setText(QApplication::translate("MainWindow", "File", nullptr));
+        actionSave->setText(QApplication::translate("MainWindow", "Save", nullptr));
+        actionRecover->setText(QApplication::translate("MainWindow", "Recover", nullptr));
         label->setText(QApplication::translate("MainWindow", "Username:", nullptr));
         register_submit->setText(QApplication::translate("MainWindow", "Register", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(tab), QApplication::translate("MainWindow", "Register", nullptr));
@@ -382,8 +391,7 @@ public:
         tabWidget->setTabText(tabWidget->indexOf(tab_7), QApplication::translate("MainWindow", "Delete", nullptr));
         summary_submit->setText(QApplication::translate("MainWindow", "See summary", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(tab_8), QApplication::translate("MainWindow", "Summary", nullptr));
-        menuRegister->setTitle(QApplication::translate("MainWindow", "Save", nullptr));
-        menuRecover->setTitle(QApplication::translate("MainWindow", "Recover", nullptr));
+        menuRegister->setTitle(QApplication::translate("MainWindow", "File", nullptr));
     } // retranslateUi
 
 };

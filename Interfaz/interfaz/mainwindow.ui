@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Civilizations</string>
   </property>
   <widget class="QWidget" name="centralWidget">
    <layout class="QGridLayout" name="gridLayout">
@@ -289,7 +289,7 @@
     <enum>TopToolBarArea</enum>
    </attribute>
    <attribute name="toolBarBreak">
-    <bool>true</bool>
+    <bool>false</bool>
    </attribute>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
@@ -304,21 +304,32 @@
    </property>
    <widget class="QMenu" name="menuRegister">
     <property name="title">
-     <string>Save</string>
+     <string>File</string>
     </property>
     <addaction name="separator"/>
-   </widget>
-   <widget class="QMenu" name="menuRecover">
-    <property name="title">
-     <string>Recover</string>
-    </property>
+    <addaction name="actionSave"/>
+    <addaction name="actionRecover"/>
    </widget>
    <addaction name="menuRegister"/>
-   <addaction name="menuRecover"/>
   </widget>
   <action name="actionType_here">
    <property name="text">
     <string>Type here</string>
+   </property>
+  </action>
+  <action name="actionFile">
+   <property name="text">
+    <string>File</string>
+   </property>
+  </action>
+  <action name="actionSave">
+   <property name="text">
+    <string>Save</string>
+   </property>
+  </action>
+  <action name="actionRecover">
+   <property name="text">
+    <string>Recover</string>
    </property>
   </action>
  </widget>

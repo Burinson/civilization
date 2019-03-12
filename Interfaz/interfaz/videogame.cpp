@@ -47,6 +47,7 @@ bool VideoGame::deleteCivilization(const string target)
             auto it = civilizations.begin();
             civilizations.erase(it+int(i));
             found = true;
+            break;
         }
     }
     return found;
