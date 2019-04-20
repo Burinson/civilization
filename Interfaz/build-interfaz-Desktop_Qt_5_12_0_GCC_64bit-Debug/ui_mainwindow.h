@@ -84,6 +84,42 @@ public:
     QWidget *tab_8;
     QGridLayout *gridLayout_9;
     QPushButton *summary_submit;
+    QWidget *tab_9;
+    QGridLayout *gridLayout_10;
+    QLabel *label_11;
+    QPushButton *search_civilization_input;
+    QLineEdit *civilization_search_input;
+    QTabWidget *menu_options;
+    QWidget *tab_10;
+    QGridLayout *gridLayout_11;
+    QLabel *label_12;
+    QLineEdit *villager_name_add;
+    QLabel *label_13;
+    QSpinBox *villager_age_add;
+    QLabel *label_14;
+    QLineEdit *villager_gender_add;
+    QLabel *label_15;
+    QSpinBox *villager_health_add;
+    QPushButton *push_villager_front;
+    QPushButton *push_villager_back;
+    QWidget *tab_11;
+    QGridLayout *gridLayout_12;
+    QTabWidget *tabWidget_2;
+    QWidget *tab_16;
+    QGridLayout *gridLayout_13;
+    QLabel *label_16;
+    QLineEdit *villager_delete_name_input;
+    QPushButton *delete_villager_name_submit;
+    QWidget *tab_14;
+    QGridLayout *gridLayout_14;
+    QLabel *label_17;
+    QSpinBox *delete_villager_health_input;
+    QPushButton *delete_villager_health_submit;
+    QWidget *tab_15;
+    QGridLayout *gridLayout_15;
+    QPushButton *delete_old_villagers;
+    QWidget *tab_12;
+    QWidget *tab_13;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
     QMenuBar *menuBar;
@@ -93,7 +129,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(881, 376);
+        MainWindow->resize(915, 554);
         actionType_here = new QAction(MainWindow);
         actionType_here->setObjectName(QString::fromUtf8("actionType_here"));
         actionFile = new QAction(MainWindow);
@@ -328,6 +364,165 @@ public:
         gridLayout_9->addWidget(summary_submit, 0, 0, 1, 1);
 
         tabWidget->addTab(tab_8, QString());
+        tab_9 = new QWidget();
+        tab_9->setObjectName(QString::fromUtf8("tab_9"));
+        gridLayout_10 = new QGridLayout(tab_9);
+        gridLayout_10->setSpacing(6);
+        gridLayout_10->setContentsMargins(11, 11, 11, 11);
+        gridLayout_10->setObjectName(QString::fromUtf8("gridLayout_10"));
+        label_11 = new QLabel(tab_9);
+        label_11->setObjectName(QString::fromUtf8("label_11"));
+
+        gridLayout_10->addWidget(label_11, 0, 0, 1, 1);
+
+        search_civilization_input = new QPushButton(tab_9);
+        search_civilization_input->setObjectName(QString::fromUtf8("search_civilization_input"));
+
+        gridLayout_10->addWidget(search_civilization_input, 1, 1, 1, 1);
+
+        civilization_search_input = new QLineEdit(tab_9);
+        civilization_search_input->setObjectName(QString::fromUtf8("civilization_search_input"));
+
+        gridLayout_10->addWidget(civilization_search_input, 0, 1, 1, 1);
+
+        menu_options = new QTabWidget(tab_9);
+        menu_options->setObjectName(QString::fromUtf8("menu_options"));
+        tab_10 = new QWidget();
+        tab_10->setObjectName(QString::fromUtf8("tab_10"));
+        gridLayout_11 = new QGridLayout(tab_10);
+        gridLayout_11->setSpacing(6);
+        gridLayout_11->setContentsMargins(11, 11, 11, 11);
+        gridLayout_11->setObjectName(QString::fromUtf8("gridLayout_11"));
+        label_12 = new QLabel(tab_10);
+        label_12->setObjectName(QString::fromUtf8("label_12"));
+
+        gridLayout_11->addWidget(label_12, 0, 0, 1, 1);
+
+        villager_name_add = new QLineEdit(tab_10);
+        villager_name_add->setObjectName(QString::fromUtf8("villager_name_add"));
+
+        gridLayout_11->addWidget(villager_name_add, 0, 1, 1, 1);
+
+        label_13 = new QLabel(tab_10);
+        label_13->setObjectName(QString::fromUtf8("label_13"));
+
+        gridLayout_11->addWidget(label_13, 1, 0, 1, 1);
+
+        villager_age_add = new QSpinBox(tab_10);
+        villager_age_add->setObjectName(QString::fromUtf8("villager_age_add"));
+
+        gridLayout_11->addWidget(villager_age_add, 1, 1, 1, 1);
+
+        label_14 = new QLabel(tab_10);
+        label_14->setObjectName(QString::fromUtf8("label_14"));
+
+        gridLayout_11->addWidget(label_14, 2, 0, 1, 1);
+
+        villager_gender_add = new QLineEdit(tab_10);
+        villager_gender_add->setObjectName(QString::fromUtf8("villager_gender_add"));
+
+        gridLayout_11->addWidget(villager_gender_add, 2, 1, 1, 1);
+
+        label_15 = new QLabel(tab_10);
+        label_15->setObjectName(QString::fromUtf8("label_15"));
+
+        gridLayout_11->addWidget(label_15, 3, 0, 1, 1);
+
+        villager_health_add = new QSpinBox(tab_10);
+        villager_health_add->setObjectName(QString::fromUtf8("villager_health_add"));
+
+        gridLayout_11->addWidget(villager_health_add, 3, 1, 1, 1);
+
+        push_villager_front = new QPushButton(tab_10);
+        push_villager_front->setObjectName(QString::fromUtf8("push_villager_front"));
+
+        gridLayout_11->addWidget(push_villager_front, 4, 1, 1, 1);
+
+        push_villager_back = new QPushButton(tab_10);
+        push_villager_back->setObjectName(QString::fromUtf8("push_villager_back"));
+
+        gridLayout_11->addWidget(push_villager_back, 5, 1, 1, 1);
+
+        menu_options->addTab(tab_10, QString());
+        tab_11 = new QWidget();
+        tab_11->setObjectName(QString::fromUtf8("tab_11"));
+        gridLayout_12 = new QGridLayout(tab_11);
+        gridLayout_12->setSpacing(6);
+        gridLayout_12->setContentsMargins(11, 11, 11, 11);
+        gridLayout_12->setObjectName(QString::fromUtf8("gridLayout_12"));
+        tabWidget_2 = new QTabWidget(tab_11);
+        tabWidget_2->setObjectName(QString::fromUtf8("tabWidget_2"));
+        tab_16 = new QWidget();
+        tab_16->setObjectName(QString::fromUtf8("tab_16"));
+        gridLayout_13 = new QGridLayout(tab_16);
+        gridLayout_13->setSpacing(6);
+        gridLayout_13->setContentsMargins(11, 11, 11, 11);
+        gridLayout_13->setObjectName(QString::fromUtf8("gridLayout_13"));
+        label_16 = new QLabel(tab_16);
+        label_16->setObjectName(QString::fromUtf8("label_16"));
+
+        gridLayout_13->addWidget(label_16, 0, 0, 1, 1);
+
+        villager_delete_name_input = new QLineEdit(tab_16);
+        villager_delete_name_input->setObjectName(QString::fromUtf8("villager_delete_name_input"));
+
+        gridLayout_13->addWidget(villager_delete_name_input, 0, 1, 1, 1);
+
+        delete_villager_name_submit = new QPushButton(tab_16);
+        delete_villager_name_submit->setObjectName(QString::fromUtf8("delete_villager_name_submit"));
+
+        gridLayout_13->addWidget(delete_villager_name_submit, 1, 1, 1, 1);
+
+        tabWidget_2->addTab(tab_16, QString());
+        tab_14 = new QWidget();
+        tab_14->setObjectName(QString::fromUtf8("tab_14"));
+        gridLayout_14 = new QGridLayout(tab_14);
+        gridLayout_14->setSpacing(6);
+        gridLayout_14->setContentsMargins(11, 11, 11, 11);
+        gridLayout_14->setObjectName(QString::fromUtf8("gridLayout_14"));
+        label_17 = new QLabel(tab_14);
+        label_17->setObjectName(QString::fromUtf8("label_17"));
+
+        gridLayout_14->addWidget(label_17, 0, 0, 1, 1);
+
+        delete_villager_health_input = new QSpinBox(tab_14);
+        delete_villager_health_input->setObjectName(QString::fromUtf8("delete_villager_health_input"));
+        delete_villager_health_input->setMaximum(100);
+
+        gridLayout_14->addWidget(delete_villager_health_input, 0, 1, 1, 1);
+
+        delete_villager_health_submit = new QPushButton(tab_14);
+        delete_villager_health_submit->setObjectName(QString::fromUtf8("delete_villager_health_submit"));
+
+        gridLayout_14->addWidget(delete_villager_health_submit, 1, 0, 1, 2);
+
+        tabWidget_2->addTab(tab_14, QString());
+        tab_15 = new QWidget();
+        tab_15->setObjectName(QString::fromUtf8("tab_15"));
+        gridLayout_15 = new QGridLayout(tab_15);
+        gridLayout_15->setSpacing(6);
+        gridLayout_15->setContentsMargins(11, 11, 11, 11);
+        gridLayout_15->setObjectName(QString::fromUtf8("gridLayout_15"));
+        delete_old_villagers = new QPushButton(tab_15);
+        delete_old_villagers->setObjectName(QString::fromUtf8("delete_old_villagers"));
+
+        gridLayout_15->addWidget(delete_old_villagers, 0, 0, 1, 1);
+
+        tabWidget_2->addTab(tab_15, QString());
+
+        gridLayout_12->addWidget(tabWidget_2, 0, 1, 1, 1);
+
+        menu_options->addTab(tab_11, QString());
+        tab_12 = new QWidget();
+        tab_12->setObjectName(QString::fromUtf8("tab_12"));
+        menu_options->addTab(tab_12, QString());
+        tab_13 = new QWidget();
+        tab_13->setObjectName(QString::fromUtf8("tab_13"));
+        menu_options->addTab(tab_13, QString());
+
+        gridLayout_10->addWidget(menu_options, 2, 1, 1, 1);
+
+        tabWidget->addTab(tab_9, QString());
 
         gridLayout->addWidget(tabWidget, 1, 0, 1, 2);
 
@@ -340,7 +535,7 @@ public:
         MainWindow->setStatusBar(statusBar);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QString::fromUtf8("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 881, 22));
+        menuBar->setGeometry(QRect(0, 0, 915, 22));
         menuRegister = new QMenu(menuBar);
         menuRegister->setObjectName(QString::fromUtf8("menuRegister"));
         MainWindow->setMenuBar(menuBar);
@@ -352,7 +547,9 @@ public:
 
         retranslateUi(MainWindow);
 
-        tabWidget->setCurrentIndex(7);
+        tabWidget->setCurrentIndex(8);
+        menu_options->setCurrentIndex(1);
+        tabWidget_2->setCurrentIndex(2);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -391,6 +588,27 @@ public:
         tabWidget->setTabText(tabWidget->indexOf(tab_7), QApplication::translate("MainWindow", "Delete", nullptr));
         summary_submit->setText(QApplication::translate("MainWindow", "See summary", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(tab_8), QApplication::translate("MainWindow", "Summary", nullptr));
+        label_11->setText(QApplication::translate("MainWindow", "Civilization name", nullptr));
+        search_civilization_input->setText(QApplication::translate("MainWindow", "Search", nullptr));
+        label_12->setText(QApplication::translate("MainWindow", "Name", nullptr));
+        label_13->setText(QApplication::translate("MainWindow", "Age", nullptr));
+        label_14->setText(QApplication::translate("MainWindow", "Gender", nullptr));
+        label_15->setText(QApplication::translate("MainWindow", "Health", nullptr));
+        push_villager_front->setText(QApplication::translate("MainWindow", "Push villager to front", nullptr));
+        push_villager_back->setText(QApplication::translate("MainWindow", "Push villager to back", nullptr));
+        menu_options->setTabText(menu_options->indexOf(tab_10), QApplication::translate("MainWindow", "Add villager", nullptr));
+        label_16->setText(QApplication::translate("MainWindow", "Villager name:", nullptr));
+        delete_villager_name_submit->setText(QApplication::translate("MainWindow", "Delete villager", nullptr));
+        tabWidget_2->setTabText(tabWidget_2->indexOf(tab_16), QApplication::translate("MainWindow", "By name", nullptr));
+        label_17->setText(QApplication::translate("MainWindow", "Health: ", nullptr));
+        delete_villager_health_submit->setText(QApplication::translate("MainWindow", "Delete all villagers weaker than this", nullptr));
+        tabWidget_2->setTabText(tabWidget_2->indexOf(tab_14), QApplication::translate("MainWindow", "By health", nullptr));
+        delete_old_villagers->setText(QApplication::translate("MainWindow", "Delete villagers older than 60", nullptr));
+        tabWidget_2->setTabText(tabWidget_2->indexOf(tab_15), QApplication::translate("MainWindow", "By age", nullptr));
+        menu_options->setTabText(menu_options->indexOf(tab_11), QApplication::translate("MainWindow", "Delete villager", nullptr));
+        menu_options->setTabText(menu_options->indexOf(tab_12), QApplication::translate("MainWindow", "Order villagers", nullptr));
+        menu_options->setTabText(menu_options->indexOf(tab_13), QApplication::translate("MainWindow", "Show villagers", nullptr));
+        tabWidget->setTabText(tabWidget->indexOf(tab_9), QApplication::translate("MainWindow", "Search", nullptr));
         menuRegister->setTitle(QApplication::translate("MainWindow", "File", nullptr));
     } // retranslateUi
 

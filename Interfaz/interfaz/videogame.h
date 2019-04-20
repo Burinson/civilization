@@ -20,6 +20,8 @@ public:
     void sortCivilizations();
     bool deleteCivilization(const string target);
     size_t total();
+    Civilization *searchCivilization(string target);
+    bool civilizationExists(string target);
 
     Civilization& operator[](size_t n) {
         return civilizations[n];

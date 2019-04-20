@@ -29,13 +29,15 @@ SOURCES += \
         mainwindow.cpp \
     civilization.cpp \
     videogame.cpp \
-    table.cpp
+    table.cpp \
+    villager.cpp
 
 HEADERS += \
         mainwindow.h \
     civilization.h \
     videogame.h \
-    table.h
+    table.h \
+    villager.h
 
 FORMS += \
         mainwindow.ui \

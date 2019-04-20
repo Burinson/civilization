@@ -34,6 +34,18 @@ private slots:
 
     void on_summary_submit_clicked();
 
+    void on_search_civilization_input_clicked();
+
+    void on_push_villager_front_clicked();
+
+    void on_push_villager_back_clicked();
+
+    void on_delete_villager_name_submit_clicked();
+
+    void on_delete_villager_health_submit_clicked();
+
+    void on_delete_old_villagers_clicked();
+
 private:
     Ui::MainWindow *ui;
     VideoGame videogame;

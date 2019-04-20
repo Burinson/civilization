@@ -58,6 +58,30 @@ size_t VideoGame::total()
     return civilizations.size();
 }
 
+Civilization* VideoGame::searchCivilization(string target)
+{
+    Civilization* found;
+    for (size_t i = 0; i < total(); ++i) {
+        if (civilizations[i].getName() == target) {
+            found = &civilizations[i];
+            break;
+        }
+    }
+    return found;
+}
+
+bool VideoGame::civilizationExists(string target)
+{
+    bool found = false;
+    for (size_t i = 0; i < total(); ++i) {
+        if (civilizations[i].getName() == target) {
+            found = true;
+            break;
+        }
+    }
+    return found;
+}
+
 VideoGame::VideoGame()
 {
     username = "undefined";

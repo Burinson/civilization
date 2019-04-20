@@ -157,3 +157,117 @@ void MainWindow::on_summary_submit_clicked()
     table.setVideogame(videogame);
     qDebug() << "[✔] Showing summary";
 }
+
+/**
+ * Search civilizations
+ */
+void MainWindow::on_search_civilization_input_clicked()
+{
+    QString search = ui->civilization_search_input->text();
+
+    if (videogame.total() == 0) {
+        QMessageBox::information(this, "Error", "There are no civilizations to search");
+    } else if (!videogame.civilizationExists(search.toStdString())) {
+        QMessageBox::information(this, "Error", "Civilization does not exist");
+    } else {
+        qDebug() << "[✔] Civilization found";
+    }
+}
+
+/**
+ * Push villager to front
+ */
+void MainWindow::on_push_villager_front_clicked()
+{
+    Villager v;
+    QString search = ui->civilization_search_input->text();
+    Civilization* c = videogame.searchCivilization(search.toStdString());
+    QString name = ui->villager_name_add->text();
+    int age = ui->villager_age_add->value();
+    QString gender = ui->villager_gender_add->text();
+    int health = ui->villager_health_add->value();
+
+    v.setNombre(name.toStdString());
+    v.setEdad(age);
+    v.setGender(gender.toStdString());
+    v.setHealth(health);
+
+    c->push_villager_front(v);
+    qDebug() << "[✔] Villager pushed to front";
+
+
+}
+
+/**
+ * Push villager to back
+ */
+void MainWindow::on_push_villager_back_clicked()
+{
+    Villager v;
+    QString search = ui->civilization_search_input->text();
+    Civilization* c = videogame.searchCivilization(search.toStdString());
+    QString name = ui->villager_name_add->text();
+    int age = ui->villager_age_add->value();
+    QString gender = ui->villager_gender_add->text();
+    int health = ui->villager_health_add->value();
+
+    v.setNombre(name.toStdString());
+    v.setEdad(age);
+    v.setGender(gender.toStdString());
+    v.setHealth(health);
+
+    c->push_villager_front(v);
+    qDebug() << "[✔] Villager pushed to back";
+}
+
+/**
+ * Delete villager by name
+ */
+void MainWindow::on_delete_villager_name_submit_clicked()
+{
+    QString search = ui->delete_civilization_input->text();
+    Civilization* c = videogame.searchCivilization(search.toStdString());
+    QString name = ui->villager_delete_name_input->text();
+
+    if (c->villager_size() == 0) {
+        QMessageBox::information(this, "Error", "There are no villagers to delete");
+    } else if (!c->delete_villager(name.toStdString())) {
+        QMessageBox::information(this, "Error", "Villager does not exist");
+    } else {
+        qDebug() << "[✔]" << "Unfortunate villager deleted";
+    }
+
+}
+
+/**
+ * Delete villager by health
+ */
+void MainWindow::on_delete_villager_health_submit_clicked()
+{
+    QString search = ui->delete_civilization_input->text();
+    int health = ui->delete_villager_health_input->value();
+    Civilization* c = videogame.searchCivilization(search.toStdString());
+
+    if (c->villager_size() == 0) {
+        QMessageBox::information(this, "Error", "There are no villagers to delete");
+    } else if (!c->delete_villagers(health)) {
+        QMessageBox::information(this, "Error", "There are no villagers below this health");
+    } else {
+        qDebug() << "[✔]" << "Sick villager deleted";
+    }
+
+}
+
+void MainWindow::on_delete_old_villagers_clicked()
+{
+    QString search = ui->delete_civilization_input->text();
+    Civilization* c = videogame.searchCivilization(search.toStdString());
+
+    if (c->villager_size() == 0) {
+        QMessageBox::information(this, "Error", "There are no villagers to delete");
+    } else if (!c->delete_villager_age()) {
+        QMessageBox::information(this, "Error", "There are no old villagers to delete");
+    } else {
+        qDebug() << "[✔]" << "Old villager deleted";
+    }
+}
