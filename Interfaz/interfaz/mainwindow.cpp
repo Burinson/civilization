@@ -271,3 +271,30 @@ void MainWindow::on_delete_old_villagers_clicked()
         qDebug() << "[✔]" << "Old villager deleted";
     }
 }
+
+void MainWindow::on_order_villagers_name_submit_clicked()
+{
+    QString search = ui->civilization_search_input->text();
+    Civilization* c = videogame.searchCivilization(search.toStdString());
+
+    c->sort_villagers_name();
+    qDebug() << "[✔]" << "Villagers sorted by name";
+}
+
+void MainWindow::on_order_villagers_age_submit_clicked()
+{
+    QString search = ui->civilization_search_input->text();
+    Civilization* c = videogame.searchCivilization(search.toStdString());
+
+    c->sort_villagers_age();
+    qDebug() << "[✔]" << "Villagers sorted by age";
+}
+
+void MainWindow::on_order_villagers_by_health_clicked()
+{
+    QString search = ui->civilization_search_input->text();
+    Civilization* c = videogame.searchCivilization(search.toStdString());
+
+    c->sort_villagers_health();
+    qDebug() << "[✔]" << "Villagers sorted by health";
+}

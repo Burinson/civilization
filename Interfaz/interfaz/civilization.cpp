@@ -1,4 +1,5 @@
 #include "civilization.h"
+#include <algorithm>
 
 string Civilization::getName() const
 {
@@ -70,6 +71,21 @@ bool Civilization::delete_villager_age()
         }
     }
     return found;
+}
+
+void Civilization::sort_villagers_name()
+{
+    villagers.sort();
+}
+
+void Civilization::sort_villagers_age()
+{
+    villagers.sort([](const Villager &v1, const Villager &v2){return v1.getEdad() > v2.getEdad(); });
+}
+
+void Civilization::sort_villagers_health()
+{
+    villagers.sort([](const Villager &v1, const Villager &v2){return v1.getHealth() > v2.getHealth(); });
 }
 
 bool Civilization::delete_villagers(const int health)

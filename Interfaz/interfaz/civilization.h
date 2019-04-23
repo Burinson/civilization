@@ -31,7 +31,11 @@ public:
     bool delete_villager(const string &target);
     bool delete_villagers(const int health);
     bool delete_villager_age();
+    void sort_villagers_name();
+    void sort_villagers_age();
+    void sort_villagers_health();
     size_t villager_size();
 };
 
 #endif // CIVILIZACION_H
+//cins

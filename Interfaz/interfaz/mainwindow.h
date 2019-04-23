@@ -46,6 +46,12 @@ private slots:
 
     void on_delete_old_villagers_clicked();
 
+    void on_order_villagers_name_submit_clicked();
+
+    void on_order_villagers_age_submit_clicked();
+
+    void on_order_villagers_by_health_clicked();
+
 private:
     Ui::MainWindow *ui;
     VideoGame videogame;

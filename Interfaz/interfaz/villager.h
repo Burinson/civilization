@@ -19,6 +19,11 @@ public:
     void setGender(const string &value);
     int getHealth() const;
     void setHealth(int value);
+
+    bool operator<(Villager &v) {
+        return  nombre < v.getNombre();
+    }
+
 };
 
 #endif // VILLAGER_H

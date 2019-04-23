@@ -119,6 +119,10 @@ public:
     QGridLayout *gridLayout_15;
     QPushButton *delete_old_villagers;
     QWidget *tab_12;
+    QGridLayout *gridLayout_16;
+    QPushButton *order_villagers_name_submit;
+    QPushButton *order_villagers_age_submit;
+    QPushButton *order_villagers_by_health;
     QWidget *tab_13;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -515,6 +519,25 @@ public:
         menu_options->addTab(tab_11, QString());
         tab_12 = new QWidget();
         tab_12->setObjectName(QString::fromUtf8("tab_12"));
+        gridLayout_16 = new QGridLayout(tab_12);
+        gridLayout_16->setSpacing(6);
+        gridLayout_16->setContentsMargins(11, 11, 11, 11);
+        gridLayout_16->setObjectName(QString::fromUtf8("gridLayout_16"));
+        order_villagers_name_submit = new QPushButton(tab_12);
+        order_villagers_name_submit->setObjectName(QString::fromUtf8("order_villagers_name_submit"));
+
+        gridLayout_16->addWidget(order_villagers_name_submit, 0, 0, 1, 1);
+
+        order_villagers_age_submit = new QPushButton(tab_12);
+        order_villagers_age_submit->setObjectName(QString::fromUtf8("order_villagers_age_submit"));
+
+        gridLayout_16->addWidget(order_villagers_age_submit, 1, 0, 1, 1);
+
+        order_villagers_by_health = new QPushButton(tab_12);
+        order_villagers_by_health->setObjectName(QString::fromUtf8("order_villagers_by_health"));
+
+        gridLayout_16->addWidget(order_villagers_by_health, 2, 0, 1, 1);
+
         menu_options->addTab(tab_12, QString());
         tab_13 = new QWidget();
         tab_13->setObjectName(QString::fromUtf8("tab_13"));
@@ -524,7 +547,7 @@ public:
 
         tabWidget->addTab(tab_9, QString());
 
-        gridLayout->addWidget(tabWidget, 1, 0, 1, 2);
+        gridLayout->addWidget(tabWidget, 0, 0, 1, 1);
 
         MainWindow->setCentralWidget(centralWidget);
         mainToolBar = new QToolBar(MainWindow);
@@ -548,7 +571,7 @@ public:
         retranslateUi(MainWindow);
 
         tabWidget->setCurrentIndex(8);
-        menu_options->setCurrentIndex(1);
+        menu_options->setCurrentIndex(2);
         tabWidget_2->setCurrentIndex(2);
 
 
@@ -606,6 +629,9 @@ public:
         delete_old_villagers->setText(QApplication::translate("MainWindow", "Delete villagers older than 60", nullptr));
         tabWidget_2->setTabText(tabWidget_2->indexOf(tab_15), QApplication::translate("MainWindow", "By age", nullptr));
         menu_options->setTabText(menu_options->indexOf(tab_11), QApplication::translate("MainWindow", "Delete villager", nullptr));
+        order_villagers_name_submit->setText(QApplication::translate("MainWindow", "Order villagers by name", nullptr));
+        order_villagers_age_submit->setText(QApplication::translate("MainWindow", "Order villagers by age", nullptr));
+        order_villagers_by_health->setText(QApplication::translate("MainWindow", "Order villagers by health", nullptr));
         menu_options->setTabText(menu_options->indexOf(tab_12), QApplication::translate("MainWindow", "Order villagers", nullptr));
         menu_options->setTabText(menu_options->indexOf(tab_13), QApplication::translate("MainWindow", "Show villagers", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(tab_9), QApplication::translate("MainWindow", "Search", nullptr));
