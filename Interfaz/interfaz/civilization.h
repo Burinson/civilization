@@ -35,6 +35,13 @@ public:
     void sort_villagers_age();
     void sort_villagers_health();
     size_t villager_size();
+
+    Villager operator[](size_t n) {
+        auto it = villagers.begin();
+        advance(it, n);
+        Villager v = *it;
+        return v;
+    }
 };
 
 #endif // CIVILIZACION_H

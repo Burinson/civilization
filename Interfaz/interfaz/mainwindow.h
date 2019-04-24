@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include "videogame.h"
 #include "table.h"
+#include "villagerdisplay.h"
 
 namespace Ui {
 class MainWindow;
@@ -52,10 +53,13 @@ private slots:
 
     void on_order_villagers_by_health_clicked();
 
+    void on_show_villagers_input_clicked();
+
 private:
     Ui::MainWindow *ui;
     VideoGame videogame;
     Table table;
+    villagerdisplay villagerDisplay;
 };
 
 #endif // MAINWINDOW_H

@@ -30,18 +30,21 @@ SOURCES += \
     civilization.cpp \
     videogame.cpp \
     table.cpp \
-    villager.cpp
+    villager.cpp \
+    villagerdisplay.cpp
 
 HEADERS += \
         mainwindow.h \
     civilization.h \
     videogame.h \
     table.h \
-    villager.h
+    villager.h \
+    villagerdisplay.h
 
 FORMS += \
         mainwindow.ui \
-    table.ui
+    table.ui \
+    villagerdisplay.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

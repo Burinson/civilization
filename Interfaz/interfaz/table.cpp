@@ -20,8 +20,8 @@ Table::~Table()
 void Table::setVideogame(VideoGame &videogame)
 {
     ui->tableHeader->clear();
-    string username = videogame.getUsername();
-    size_t size        = videogame.total();
+    string username     = videogame.getUsername();
+    size_t size         = videogame.total();
 
     QString username_q  = QString::fromStdString(username);
     QString size_q      = QString::number(size);

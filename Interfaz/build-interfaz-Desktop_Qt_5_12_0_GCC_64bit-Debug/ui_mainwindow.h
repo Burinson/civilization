@@ -124,6 +124,8 @@ public:
     QPushButton *order_villagers_age_submit;
     QPushButton *order_villagers_by_health;
     QWidget *tab_13;
+    QGridLayout *gridLayout_17;
+    QPushButton *show_villagers_input;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
     QMenuBar *menuBar;
@@ -541,6 +543,15 @@ public:
         menu_options->addTab(tab_12, QString());
         tab_13 = new QWidget();
         tab_13->setObjectName(QString::fromUtf8("tab_13"));
+        gridLayout_17 = new QGridLayout(tab_13);
+        gridLayout_17->setSpacing(6);
+        gridLayout_17->setContentsMargins(11, 11, 11, 11);
+        gridLayout_17->setObjectName(QString::fromUtf8("gridLayout_17"));
+        show_villagers_input = new QPushButton(tab_13);
+        show_villagers_input->setObjectName(QString::fromUtf8("show_villagers_input"));
+
+        gridLayout_17->addWidget(show_villagers_input, 0, 0, 1, 1);
+
         menu_options->addTab(tab_13, QString());
 
         gridLayout_10->addWidget(menu_options, 2, 1, 1, 1);
@@ -571,7 +582,7 @@ public:
         retranslateUi(MainWindow);
 
         tabWidget->setCurrentIndex(8);
-        menu_options->setCurrentIndex(2);
+        menu_options->setCurrentIndex(3);
         tabWidget_2->setCurrentIndex(2);
 
 
@@ -633,6 +644,7 @@ public:
         order_villagers_age_submit->setText(QApplication::translate("MainWindow", "Order villagers by age", nullptr));
         order_villagers_by_health->setText(QApplication::translate("MainWindow", "Order villagers by health", nullptr));
         menu_options->setTabText(menu_options->indexOf(tab_12), QApplication::translate("MainWindow", "Order villagers", nullptr));
+        show_villagers_input->setText(QApplication::translate("MainWindow", "Show villagers", nullptr));
         menu_options->setTabText(menu_options->indexOf(tab_13), QApplication::translate("MainWindow", "Show villagers", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(tab_9), QApplication::translate("MainWindow", "Search", nullptr));
         menuRegister->setTitle(QApplication::translate("MainWindow", "File", nullptr));

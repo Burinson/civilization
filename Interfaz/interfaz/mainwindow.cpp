@@ -216,7 +216,7 @@ void MainWindow::on_push_villager_back_clicked()
     v.setGender(gender.toStdString());
     v.setHealth(health);
 
-    c->push_villager_front(v);
+    c->push_villager_back(v);
     qDebug() << "[✔] Villager pushed to back";
 }
 
@@ -225,7 +225,7 @@ void MainWindow::on_push_villager_back_clicked()
  */
 void MainWindow::on_delete_villager_name_submit_clicked()
 {
-    QString search = ui->delete_civilization_input->text();
+    QString search = ui->civilization_search_input->text();
     Civilization* c = videogame.searchCivilization(search.toStdString());
     QString name = ui->villager_delete_name_input->text();
 
@@ -244,7 +244,7 @@ void MainWindow::on_delete_villager_name_submit_clicked()
  */
 void MainWindow::on_delete_villager_health_submit_clicked()
 {
-    QString search = ui->delete_civilization_input->text();
+    QString search = ui->civilization_search_input->text();
     int health = ui->delete_villager_health_input->value();
     Civilization* c = videogame.searchCivilization(search.toStdString());
 
@@ -260,7 +260,7 @@ void MainWindow::on_delete_villager_health_submit_clicked()
 
 void MainWindow::on_delete_old_villagers_clicked()
 {
-    QString search = ui->delete_civilization_input->text();
+    QString search = ui->civilization_search_input->text();
     Civilization* c = videogame.searchCivilization(search.toStdString());
 
     if (c->villager_size() == 0) {
@@ -297,4 +297,13 @@ void MainWindow::on_order_villagers_by_health_clicked()
 
     c->sort_villagers_health();
     qDebug() << "[✔]" << "Villagers sorted by health";
+}
+
+void MainWindow::on_show_villagers_input_clicked()
+{
+    QString search = ui->civilization_search_input->text();
+    Civilization* c = videogame.searchCivilization(search.toStdString());
+
+    villagerDisplay.show();
+    villagerDisplay.setCivilization(c);
 }
