@@ -60,6 +60,7 @@ private:
     VideoGame videogame;
     Table table;
     villagerdisplay villagerDisplay;
+    bool flag = false;
 };
 
 #endif // MAINWINDOW_H
