@@ -126,6 +126,12 @@ public:
     QWidget *tab_13;
     QGridLayout *gridLayout_17;
     QPushButton *show_villagers_input;
+    QWidget *tab_17;
+    QGridLayout *gridLayout_18;
+    QPushButton *save_input;
+    QWidget *tab_18;
+    QGridLayout *gridLayout_19;
+    QPushButton *recover_input;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
     QMenuBar *menuBar;
@@ -557,6 +563,30 @@ public:
         gridLayout_10->addWidget(menu_options, 2, 1, 1, 1);
 
         tabWidget->addTab(tab_9, QString());
+        tab_17 = new QWidget();
+        tab_17->setObjectName(QString::fromUtf8("tab_17"));
+        gridLayout_18 = new QGridLayout(tab_17);
+        gridLayout_18->setSpacing(6);
+        gridLayout_18->setContentsMargins(11, 11, 11, 11);
+        gridLayout_18->setObjectName(QString::fromUtf8("gridLayout_18"));
+        save_input = new QPushButton(tab_17);
+        save_input->setObjectName(QString::fromUtf8("save_input"));
+
+        gridLayout_18->addWidget(save_input, 0, 0, 1, 1);
+
+        tabWidget->addTab(tab_17, QString());
+        tab_18 = new QWidget();
+        tab_18->setObjectName(QString::fromUtf8("tab_18"));
+        gridLayout_19 = new QGridLayout(tab_18);
+        gridLayout_19->setSpacing(6);
+        gridLayout_19->setContentsMargins(11, 11, 11, 11);
+        gridLayout_19->setObjectName(QString::fromUtf8("gridLayout_19"));
+        recover_input = new QPushButton(tab_18);
+        recover_input->setObjectName(QString::fromUtf8("recover_input"));
+
+        gridLayout_19->addWidget(recover_input, 0, 0, 1, 1);
+
+        tabWidget->addTab(tab_18, QString());
 
         gridLayout->addWidget(tabWidget, 0, 0, 1, 1);
 
@@ -581,7 +611,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        tabWidget->setCurrentIndex(8);
+        tabWidget->setCurrentIndex(10);
         menu_options->setCurrentIndex(3);
         tabWidget_2->setCurrentIndex(2);
 
@@ -647,6 +677,10 @@ public:
         show_villagers_input->setText(QApplication::translate("MainWindow", "Show villagers", nullptr));
         menu_options->setTabText(menu_options->indexOf(tab_13), QApplication::translate("MainWindow", "Show villagers", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(tab_9), QApplication::translate("MainWindow", "Search", nullptr));
+        save_input->setText(QApplication::translate("MainWindow", "Save civilizations", nullptr));
+        tabWidget->setTabText(tabWidget->indexOf(tab_17), QApplication::translate("MainWindow", "Save", nullptr));
+        recover_input->setText(QApplication::translate("MainWindow", "Recover civilizations", nullptr));
+        tabWidget->setTabText(tabWidget->indexOf(tab_18), QApplication::translate("MainWindow", "Recover", nullptr));
         menuRegister->setTitle(QApplication::translate("MainWindow", "File", nullptr));
     } // retranslateUi
 

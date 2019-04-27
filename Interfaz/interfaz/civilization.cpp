@@ -1,5 +1,7 @@
 #include "civilization.h"
 #include <algorithm>
+#include <fstream>
+#include <iomanip>
 
 string Civilization::getName() const
 {
@@ -107,6 +109,20 @@ bool Civilization::delete_villagers(const int health)
 size_t Civilization::villager_size()
 {
     return villagers.size();
+}
+
+void Civilization::save()
+{
+    ofstream file(getName() + ".txt", ios::out);
+
+    for(auto it = villagers.begin(); it != villagers.end(); ++it) {
+        Villager &v = *it;
+        file << v.getNombre() << endl;
+        file << v.getEdad() << endl;
+        file << v.getGender() << endl;
+        file << v.getHealth() << endl;
+    }
+    file.close();
 }
 
 Civilization::Civilization()

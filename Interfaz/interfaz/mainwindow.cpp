@@ -360,3 +360,20 @@ void MainWindow::on_show_villagers_input_clicked()
     } else
         QMessageBox::information(this, "Error", "Civilization not found");
 }
+/**
+ * Save civilizations
+ */
+void MainWindow::on_save_input_clicked()
+{
+    videogame.save();
+    qDebug() << "[✔] Civilizations saved";
+}
+
+/**
+ * Recover civilizations
+ */
+void MainWindow::on_recover_input_clicked()
+{
+    videogame.recover();
+    qDebug() << "[✔] Civilizations recovered";
+}

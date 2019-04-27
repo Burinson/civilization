@@ -22,6 +22,8 @@ public:
     size_t total();
     Civilization *searchCivilization(string target);
     bool civilizationExists(string target);
+    void save();
+    void recover();
 
     Civilization& operator[](size_t n) {
         return civilizations[n];

@@ -35,6 +35,7 @@ public:
     void sort_villagers_age();
     void sort_villagers_health();
     size_t villager_size();
+    void save();
 
     Villager operator[](size_t n) {
         auto it = villagers.begin();

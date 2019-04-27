@@ -55,6 +55,10 @@ private slots:
 
     void on_show_villagers_input_clicked();
 
+    void on_save_input_clicked();
+
+    void on_recover_input_clicked();
+
 private:
     Ui::MainWindow *ui;
     VideoGame videogame;
