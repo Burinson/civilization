@@ -57,6 +57,8 @@ public:
     size_t shipSize() const;
     Ship* getShip(string &id) const;
     bool shipExists(string &id) const;
+    bool deleteShip(string &id);
+    bool deleteShip(double fuel);
 };
 
 #endif // CIVILIZACION_H

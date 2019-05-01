@@ -162,13 +162,28 @@ public:
     QPushButton *addWarrior;
     QSpinBox *warriorHealth;
     QWidget *tab_28;
+    QGridLayout *gridLayout_27;
+    QPushButton *deleteWarrior;
     QWidget *tab_29;
+    QGridLayout *gridLayout_28;
+    QPlainTextEdit *topWarrior;
+    QPushButton *lastWarrior;
     QWidget *tab_30;
+    QGridLayout *gridLayout_29;
+    QPushButton *showWarriors;
     QWidget *tab_24;
     QGridLayout *gridLayout_22;
     QTabWidget *tabWidget_5;
     QWidget *tab_25;
+    QGridLayout *gridLayout_30;
+    QLabel *label_26;
+    QLineEdit *ship_id_delete;
+    QPushButton *ship_id_delete_button;
     QWidget *tab_26;
+    QGridLayout *gridLayout_31;
+    QLabel *label_27;
+    QDoubleSpinBox *ship_fuel_delete;
+    QPushButton *ship_fuel_delete_button;
     QPushButton *search_civilization_input;
     QWidget *tab_17;
     QGridLayout *gridLayout_18;
@@ -709,6 +724,7 @@ public:
 
         warriorStrength = new QDoubleSpinBox(tab_27);
         warriorStrength->setObjectName(QString::fromUtf8("warriorStrength"));
+        warriorStrength->setMaximum(60.000000000000000);
 
         gridLayout_26->addWidget(warriorStrength, 2, 1, 1, 2);
 
@@ -719,6 +735,7 @@ public:
 
         warriorShield = new QDoubleSpinBox(tab_27);
         warriorShield->setObjectName(QString::fromUtf8("warriorShield"));
+        warriorShield->setMaximum(30.000000000000000);
 
         gridLayout_26->addWidget(warriorShield, 3, 1, 1, 2);
 
@@ -743,18 +760,51 @@ public:
 
         warriorHealth = new QSpinBox(tab_27);
         warriorHealth->setObjectName(QString::fromUtf8("warriorHealth"));
+        warriorHealth->setMaximum(100);
 
         gridLayout_26->addWidget(warriorHealth, 1, 1, 1, 2);
 
         tabWidget_6->addTab(tab_27, QString());
         tab_28 = new QWidget();
         tab_28->setObjectName(QString::fromUtf8("tab_28"));
+        gridLayout_27 = new QGridLayout(tab_28);
+        gridLayout_27->setSpacing(6);
+        gridLayout_27->setContentsMargins(11, 11, 11, 11);
+        gridLayout_27->setObjectName(QString::fromUtf8("gridLayout_27"));
+        deleteWarrior = new QPushButton(tab_28);
+        deleteWarrior->setObjectName(QString::fromUtf8("deleteWarrior"));
+
+        gridLayout_27->addWidget(deleteWarrior, 0, 0, 1, 1);
+
         tabWidget_6->addTab(tab_28, QString());
         tab_29 = new QWidget();
         tab_29->setObjectName(QString::fromUtf8("tab_29"));
+        gridLayout_28 = new QGridLayout(tab_29);
+        gridLayout_28->setSpacing(6);
+        gridLayout_28->setContentsMargins(11, 11, 11, 11);
+        gridLayout_28->setObjectName(QString::fromUtf8("gridLayout_28"));
+        topWarrior = new QPlainTextEdit(tab_29);
+        topWarrior->setObjectName(QString::fromUtf8("topWarrior"));
+
+        gridLayout_28->addWidget(topWarrior, 0, 0, 1, 1);
+
+        lastWarrior = new QPushButton(tab_29);
+        lastWarrior->setObjectName(QString::fromUtf8("lastWarrior"));
+
+        gridLayout_28->addWidget(lastWarrior, 1, 0, 1, 1);
+
         tabWidget_6->addTab(tab_29, QString());
         tab_30 = new QWidget();
         tab_30->setObjectName(QString::fromUtf8("tab_30"));
+        gridLayout_29 = new QGridLayout(tab_30);
+        gridLayout_29->setSpacing(6);
+        gridLayout_29->setContentsMargins(11, 11, 11, 11);
+        gridLayout_29->setObjectName(QString::fromUtf8("gridLayout_29"));
+        showWarriors = new QPushButton(tab_30);
+        showWarriors->setObjectName(QString::fromUtf8("showWarriors"));
+
+        gridLayout_29->addWidget(showWarriors, 0, 0, 1, 1);
+
         tabWidget_6->addTab(tab_30, QString());
 
         gridLayout_25->addWidget(tabWidget_6, 1, 0, 1, 2);
@@ -770,9 +820,48 @@ public:
         tabWidget_5->setObjectName(QString::fromUtf8("tabWidget_5"));
         tab_25 = new QWidget();
         tab_25->setObjectName(QString::fromUtf8("tab_25"));
+        gridLayout_30 = new QGridLayout(tab_25);
+        gridLayout_30->setSpacing(6);
+        gridLayout_30->setContentsMargins(11, 11, 11, 11);
+        gridLayout_30->setObjectName(QString::fromUtf8("gridLayout_30"));
+        label_26 = new QLabel(tab_25);
+        label_26->setObjectName(QString::fromUtf8("label_26"));
+
+        gridLayout_30->addWidget(label_26, 0, 0, 1, 1);
+
+        ship_id_delete = new QLineEdit(tab_25);
+        ship_id_delete->setObjectName(QString::fromUtf8("ship_id_delete"));
+
+        gridLayout_30->addWidget(ship_id_delete, 0, 1, 1, 1);
+
+        ship_id_delete_button = new QPushButton(tab_25);
+        ship_id_delete_button->setObjectName(QString::fromUtf8("ship_id_delete_button"));
+
+        gridLayout_30->addWidget(ship_id_delete_button, 1, 0, 1, 2);
+
         tabWidget_5->addTab(tab_25, QString());
         tab_26 = new QWidget();
         tab_26->setObjectName(QString::fromUtf8("tab_26"));
+        gridLayout_31 = new QGridLayout(tab_26);
+        gridLayout_31->setSpacing(6);
+        gridLayout_31->setContentsMargins(11, 11, 11, 11);
+        gridLayout_31->setObjectName(QString::fromUtf8("gridLayout_31"));
+        label_27 = new QLabel(tab_26);
+        label_27->setObjectName(QString::fromUtf8("label_27"));
+
+        gridLayout_31->addWidget(label_27, 0, 0, 1, 1);
+
+        ship_fuel_delete = new QDoubleSpinBox(tab_26);
+        ship_fuel_delete->setObjectName(QString::fromUtf8("ship_fuel_delete"));
+        ship_fuel_delete->setMaximum(100.000000000000000);
+
+        gridLayout_31->addWidget(ship_fuel_delete, 0, 1, 1, 1);
+
+        ship_fuel_delete_button = new QPushButton(tab_26);
+        ship_fuel_delete_button->setObjectName(QString::fromUtf8("ship_fuel_delete_button"));
+
+        gridLayout_31->addWidget(ship_fuel_delete_button, 1, 0, 1, 2);
+
         tabWidget_5->addTab(tab_26, QString());
 
         gridLayout_22->addWidget(tabWidget_5, 0, 0, 1, 1);
@@ -843,9 +932,9 @@ public:
         tabWidget_3->setCurrentIndex(1);
         menu_options->setCurrentIndex(0);
         tabWidget_2->setCurrentIndex(2);
-        tabWidget_4->setCurrentIndex(2);
-        tabWidget_6->setCurrentIndex(0);
-        tabWidget_5->setCurrentIndex(1);
+        tabWidget_4->setCurrentIndex(3);
+        tabWidget_6->setCurrentIndex(3);
+        tabWidget_5->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -927,11 +1016,18 @@ public:
 
         addWarrior->setText(QApplication::translate("MainWindow", "Add warrior", nullptr));
         tabWidget_6->setTabText(tabWidget_6->indexOf(tab_27), QApplication::translate("MainWindow", "Add warrior", nullptr));
+        deleteWarrior->setText(QApplication::translate("MainWindow", "Delete warrior", nullptr));
         tabWidget_6->setTabText(tabWidget_6->indexOf(tab_28), QApplication::translate("MainWindow", "Delete warrior", nullptr));
+        lastWarrior->setText(QApplication::translate("MainWindow", "Show last warrior", nullptr));
         tabWidget_6->setTabText(tabWidget_6->indexOf(tab_29), QApplication::translate("MainWindow", "Show last warrior", nullptr));
+        showWarriors->setText(QApplication::translate("MainWindow", "Show warriors", nullptr));
         tabWidget_6->setTabText(tabWidget_6->indexOf(tab_30), QApplication::translate("MainWindow", "Show all warriors", nullptr));
         tabWidget_4->setTabText(tabWidget_4->indexOf(tab_23), QApplication::translate("MainWindow", "Search ships", nullptr));
+        label_26->setText(QApplication::translate("MainWindow", "Ship ID:", nullptr));
+        ship_id_delete_button->setText(QApplication::translate("MainWindow", "Delete ship", nullptr));
         tabWidget_5->setTabText(tabWidget_5->indexOf(tab_25), QApplication::translate("MainWindow", "By id", nullptr));
+        label_27->setText(QApplication::translate("MainWindow", "Fuel:", nullptr));
+        ship_fuel_delete_button->setText(QApplication::translate("MainWindow", "Delete all ships with less fuel than this", nullptr));
         tabWidget_5->setTabText(tabWidget_5->indexOf(tab_26), QApplication::translate("MainWindow", "By fuel", nullptr));
         tabWidget_4->setTabText(tabWidget_4->indexOf(tab_24), QApplication::translate("MainWindow", "Delete ships", nullptr));
         tabWidget_3->setTabText(tabWidget_3->indexOf(tab_20), QApplication::translate("MainWindow", "Ships", nullptr));

@@ -159,6 +159,40 @@ bool Civilization::shipExists(string &id) const
     return exists;
 }
 
+bool Civilization::deleteShip(string &id)
+{
+    bool found = false;
+    for(size_t i(0); i < shipSize(); ++i) {
+        auto it = port.begin();
+        advance(it, i);
+        auto x = *it;
+        if (x->getId() == id) {
+            port.erase(it);
+            delete x;
+            --i;
+            found = true;
+        }
+    }
+    return found;
+}
+
+bool Civilization::deleteShip(double fuel)
+{
+    bool found = false;
+    for(size_t i(0); i < shipSize(); ++i) {
+        auto it = port.begin();
+        advance(it, i);
+        auto x = *it;
+        if (x->getFuel() < fuel) {
+            port.erase(it);
+            delete x;
+            --i;
+            found = true;
+        }
+    }
+    return found;
+}
+
 
 
 Civilization::Civilization()

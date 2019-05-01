@@ -60,6 +60,11 @@ size_t Ship::size() const
     return warriors.size();
 }
 
+stack<Warrior> Ship::getWarriors() const
+{
+    return warriors;
+}
+
 Ship::Ship()
 {
     this->speed = 0;

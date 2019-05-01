@@ -440,3 +440,125 @@ void MainWindow::on_addWarrior_clicked()
         QMessageBox::information(this, "Error", "Civilization not found");
 
 }
+
+/**
+ * Delete warrior
+ */
+void MainWindow::on_deleteWarrior_clicked()
+{
+    if(flag) {
+        Civilization *c = videogame.searchCivilization(ui->civilization_search_input->text().toStdString());
+        string id = ui->id_search->text().toStdString();
+        if (c->shipExists(id)) {
+            Ship *s = c->getShip(id);
+            if(s->size() == 0)
+                QMessageBox::information(this, "Error", "There are no warriors to delete");
+            else {
+                s->deleteWarrior();
+                qDebug() << "[✔] Warrior deleted";
+            }
+
+        } else
+            QMessageBox::information(this, "Error", "Ship does not exist");
+
+
+    } else
+        QMessageBox::information(this, "Error", "Civilization not found");
+
+}
+
+/**
+ * Show last warrior
+ */
+void MainWindow::on_lastWarrior_clicked()
+{
+    if(flag) {
+        Civilization *c = videogame.searchCivilization(ui->civilization_search_input->text().toStdString());
+        string id = ui->id_search->text().toStdString();
+        if (c->shipExists(id)) {
+            Ship *s = c->getShip(id);
+            if(s->size() == 0)
+                QMessageBox::information(this, "Error", "There are no warriors to show");
+            else {
+                QString id = QString::fromStdString(s->top().getId());
+                QString health = QString::number(s->top().getHealth());
+                QString strength = QString::number(s->top().getStrength());
+                QString shield = QString::number(s->top().getShield());
+                QString type = QString::fromStdString(s->top().getType());
+
+                ui->topWarrior->clear();
+                ui->topWarrior->insertPlainText("ID: " + id + "\n" +
+                                                "Health: " + health + "\n" +
+                                                "Strength: " + strength + "\n" +
+                                                "Shield: " + shield + "\n"
+                                                "Type: " + type);
+                }
+    } else
+        QMessageBox::information(this, "Error", "Civilization not found");
+    }
+
+
+}
+
+/**
+ * Show all warriors
+ */
+void MainWindow::on_showWarriors_clicked()
+{
+    if(flag) {
+        Civilization *c = videogame.searchCivilization(ui->civilization_search_input->text().toStdString());
+        string id = ui->id_search->text().toStdString();
+        if (c->shipExists(id)) {
+            Ship *s = c->getShip(id);
+            if(s->size() == 0)
+                QMessageBox::information(this, "Error", "There are no warriors to show");
+            else {
+                warriordisplay.show();
+                warriordisplay.setShip(s);
+                qDebug() << "[✔] Showing warriors";
+            }
+    } else
+        QMessageBox::information(this, "Error", "Civilization not found");
+    }
+
+}
+
+/**
+ * Delete ships by ID
+ */
+void MainWindow::on_ship_id_delete_button_clicked()
+{
+    if (flag) {
+        Civilization* c = videogame.searchCivilization(ui->civilization_search_input->text().toStdString());
+        string id = ui->ship_id_delete->text().toStdString();
+        if (c->shipSize() == 0) {
+            QMessageBox::information(this, "Error", "There are no ships to delete");
+        } else if (!c->deleteShip(id)) {
+            QMessageBox::information(this, "Error", "This ship does not exist");
+        } else {
+            qDebug() << "[✔]" << "Ship deleted";
+        }
+
+    } else
+        QMessageBox::information(this, "Error", "Civilization not found");
+}
+
+/**
+ * Delete ships with less than x fuel
+ */
+void MainWindow::on_ship_fuel_delete_button_clicked()
+{
+    if (flag) {
+        Civilization* c = videogame.searchCivilization(ui->civilization_search_input->text().toStdString());
+        double fuel = ui->ship_fuel_delete->value();
+        if (c->shipSize() == 0) {
+            QMessageBox::information(this, "Error", "There are no ships to delete");
+        } else if (!c->deleteShip(fuel)) {
+            QMessageBox::information(this, "Error", "There are no ships with less fuel than this");
+        } else {
+            qDebug() << "[✔]" << "Ship deleted";
+        }
+
+    } else
+        QMessageBox::information(this, "Error", "Civilization not found");
+}

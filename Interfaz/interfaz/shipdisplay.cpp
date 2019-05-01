@@ -26,8 +26,8 @@ void ShipDisplay::setCivilization(Civilization *civilization)
     QString civNameQ = QString::fromStdString(civName);
     QString sizeQ = QString::number(size);
 
-    ui->shipInfo->insertPlainText("Civilization: " + civNameQ);
-    ui->shipInfo->insertPlainText("Number of ships: " + sizeQ);
+    ui->shipInfo->insertPlainText("Civilization: " + civNameQ + "\n");
+    ui->shipInfo->insertPlainText("Number of ships: " + sizeQ + "\n");
 
     ui->shipTable->setRowCount(int(size));
 

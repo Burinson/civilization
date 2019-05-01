@@ -34,7 +34,8 @@ SOURCES += \
     table.cpp \
     villager.cpp \
     villagerdisplay.cpp \
-    warrior.cpp
+    warrior.cpp \
+    warriordisplay.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -45,13 +46,15 @@ HEADERS += \
     table.h \
     villager.h \
     villagerdisplay.h \
-    warrior.h
+    warrior.h \
+    warriordisplay.h
 
 FORMS += \
         mainwindow.ui \
     shipdisplay.ui \
     table.ui \
-    villagerdisplay.ui
+    villagerdisplay.ui \
+    warriordisplay.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

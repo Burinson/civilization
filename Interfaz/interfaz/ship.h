@@ -29,7 +29,7 @@ public:
     void deleteWarrior();
     Warrior top() const;
     size_t size() const;
-
+    stack<Warrior> getWarriors() const;
 };
 
 #endif // SHIP_H
