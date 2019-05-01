@@ -125,6 +125,11 @@ void Civilization::save()
     file.close();
 }
 
+void Civilization::addShip(Ship *ship)
+{
+    port.push_back(ship);
+}
+
 Civilization::Civilization()
 {
 

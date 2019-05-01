@@ -28,18 +28,22 @@ SOURCES += \
         main.cpp \
         mainwindow.cpp \
     civilization.cpp \
+    ship.cpp \
     videogame.cpp \
     table.cpp \
     villager.cpp \
-    villagerdisplay.cpp
+    villagerdisplay.cpp \
+    warrior.cpp
 
 HEADERS += \
         mainwindow.h \
     civilization.h \
+    ship.h \
     videogame.h \
     table.h \
     villager.h \
-    villagerdisplay.h
+    villagerdisplay.h \
+    warrior.h
 
 FORMS += \
         mainwindow.ui \

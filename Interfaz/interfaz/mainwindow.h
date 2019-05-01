@@ -59,6 +59,8 @@ private slots:
 
     void on_recover_input_clicked();
 
+    void on_add_ship_clicked();
+
 private:
     Ui::MainWindow *ui;
     VideoGame videogame;

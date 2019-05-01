@@ -18,7 +18,7 @@
     <item row="0" column="0">
      <widget class="QTabWidget" name="tabWidget">
       <property name="currentIndex">
-       <number>10</number>
+       <number>8</number>
       </property>
       <widget class="QWidget" name="tab">
        <attribute name="title">
@@ -285,6 +285,9 @@
         <string>Search</string>
        </attribute>
        <layout class="QGridLayout" name="gridLayout_10">
+        <item row="0" column="1">
+         <widget class="QLineEdit" name="civilization_search_input"/>
+        </item>
         <item row="0" column="0">
          <widget class="QLabel" name="label_11">
           <property name="text">
@@ -292,204 +295,301 @@
           </property>
          </widget>
         </item>
+        <item row="2" column="1">
+         <widget class="QTabWidget" name="tabWidget_3">
+          <property name="currentIndex">
+           <number>1</number>
+          </property>
+          <widget class="QWidget" name="tab_19">
+           <attribute name="title">
+            <string>Villagers</string>
+           </attribute>
+           <layout class="QGridLayout" name="gridLayout_20">
+            <item row="0" column="0">
+             <widget class="QTabWidget" name="menu_options">
+              <property name="currentIndex">
+               <number>0</number>
+              </property>
+              <widget class="QWidget" name="tab_10">
+               <attribute name="title">
+                <string>Add villager</string>
+               </attribute>
+               <layout class="QGridLayout" name="gridLayout_11">
+                <item row="0" column="0">
+                 <widget class="QLabel" name="label_12">
+                  <property name="text">
+                   <string>Name</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="1">
+                 <widget class="QLineEdit" name="villager_name_add"/>
+                </item>
+                <item row="1" column="0">
+                 <widget class="QLabel" name="label_13">
+                  <property name="text">
+                   <string>Age</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="1">
+                 <widget class="QSpinBox" name="villager_age_add"/>
+                </item>
+                <item row="2" column="0">
+                 <widget class="QLabel" name="label_14">
+                  <property name="text">
+                   <string>Gender</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="1">
+                 <widget class="QLineEdit" name="villager_gender_add"/>
+                </item>
+                <item row="3" column="0">
+                 <widget class="QLabel" name="label_15">
+                  <property name="text">
+                   <string>Health</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="3" column="1">
+                 <widget class="QSpinBox" name="villager_health_add"/>
+                </item>
+                <item row="4" column="1">
+                 <widget class="QPushButton" name="push_villager_front">
+                  <property name="text">
+                   <string>Push villager to front</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="5" column="1">
+                 <widget class="QPushButton" name="push_villager_back">
+                  <property name="text">
+                   <string>Push villager to back</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+              <widget class="QWidget" name="tab_11">
+               <attribute name="title">
+                <string>Delete villager</string>
+               </attribute>
+               <layout class="QGridLayout" name="gridLayout_12">
+                <item row="0" column="1">
+                 <widget class="QTabWidget" name="tabWidget_2">
+                  <property name="currentIndex">
+                   <number>2</number>
+                  </property>
+                  <widget class="QWidget" name="tab_16">
+                   <attribute name="title">
+                    <string>By name</string>
+                   </attribute>
+                   <layout class="QGridLayout" name="gridLayout_13">
+                    <item row="0" column="0">
+                     <widget class="QLabel" name="label_16">
+                      <property name="text">
+                       <string>Villager name:</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="0" column="1">
+                     <widget class="QLineEdit" name="villager_delete_name_input"/>
+                    </item>
+                    <item row="1" column="1">
+                     <widget class="QPushButton" name="delete_villager_name_submit">
+                      <property name="text">
+                       <string>Delete villager</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                  <widget class="QWidget" name="tab_14">
+                   <attribute name="title">
+                    <string>By health</string>
+                   </attribute>
+                   <layout class="QGridLayout" name="gridLayout_14">
+                    <item row="0" column="0">
+                     <widget class="QLabel" name="label_17">
+                      <property name="text">
+                       <string>Health: </string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="0" column="1">
+                     <widget class="QSpinBox" name="delete_villager_health_input">
+                      <property name="maximum">
+                       <number>100</number>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="1" column="0" colspan="2">
+                     <widget class="QPushButton" name="delete_villager_health_submit">
+                      <property name="text">
+                       <string>Delete all villagers weaker than this</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                  <widget class="QWidget" name="tab_15">
+                   <attribute name="title">
+                    <string>By age</string>
+                   </attribute>
+                   <layout class="QGridLayout" name="gridLayout_15">
+                    <item row="0" column="0">
+                     <widget class="QPushButton" name="delete_old_villagers">
+                      <property name="text">
+                       <string>Delete villagers older than 60</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+              <widget class="QWidget" name="tab_12">
+               <attribute name="title">
+                <string>Order villagers</string>
+               </attribute>
+               <layout class="QGridLayout" name="gridLayout_16">
+                <item row="0" column="0">
+                 <widget class="QPushButton" name="order_villagers_name_submit">
+                  <property name="text">
+                   <string>Order villagers by name</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="0">
+                 <widget class="QPushButton" name="order_villagers_age_submit">
+                  <property name="text">
+                   <string>Order villagers by age</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="0">
+                 <widget class="QPushButton" name="order_villagers_by_health">
+                  <property name="text">
+                   <string>Order villagers by health</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+              <widget class="QWidget" name="tab_13">
+               <attribute name="title">
+                <string>Show villagers</string>
+               </attribute>
+               <layout class="QGridLayout" name="gridLayout_17">
+                <item row="0" column="0">
+                 <widget class="QPushButton" name="show_villagers_input">
+                  <property name="text">
+                   <string>Show villagers</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="tab_20">
+           <attribute name="title">
+            <string>Ships</string>
+           </attribute>
+           <layout class="QGridLayout" name="gridLayout_21">
+            <item row="0" column="0">
+             <widget class="QTabWidget" name="tabWidget_4">
+              <property name="currentIndex">
+               <number>0</number>
+              </property>
+              <widget class="QWidget" name="tab_21">
+               <attribute name="title">
+                <string>Add ship</string>
+               </attribute>
+               <layout class="QGridLayout" name="gridLayout_23">
+                <item row="1" column="1">
+                 <widget class="QDoubleSpinBox" name="ship_fuel">
+                  <property name="maximum">
+                   <double>100.000000000000000</double>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="1">
+                 <widget class="QLineEdit" name="ship_id"/>
+                </item>
+                <item row="1" column="0">
+                 <widget class="QLabel" name="label_19">
+                  <property name="text">
+                   <string>Fuel</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="0">
+                 <widget class="QLabel" name="label_18">
+                  <property name="text">
+                   <string>Id</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="1">
+                 <widget class="QPushButton" name="add_ship">
+                  <property name="text">
+                   <string>Add ship</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+              <widget class="QWidget" name="tab_22">
+               <attribute name="title">
+                <string>Show ships</string>
+               </attribute>
+              </widget>
+              <widget class="QWidget" name="tab_23">
+               <attribute name="title">
+                <string>Search ships</string>
+               </attribute>
+              </widget>
+              <widget class="QWidget" name="tab_24">
+               <attribute name="title">
+                <string>Delete ships</string>
+               </attribute>
+               <layout class="QGridLayout" name="gridLayout_22">
+                <item row="0" column="0">
+                 <widget class="QTabWidget" name="tabWidget_5">
+                  <property name="currentIndex">
+                   <number>1</number>
+                  </property>
+                  <widget class="QWidget" name="tab_25">
+                   <attribute name="title">
+                    <string>By id</string>
+                   </attribute>
+                  </widget>
+                  <widget class="QWidget" name="tab_26">
+                   <attribute name="title">
+                    <string>By fuel</string>
+                   </attribute>
+                  </widget>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
         <item row="1" column="1">
          <widget class="QPushButton" name="search_civilization_input">
           <property name="text">
            <string>Search</string>
           </property>
-         </widget>
-        </item>
-        <item row="0" column="1">
-         <widget class="QLineEdit" name="civilization_search_input"/>
-        </item>
-        <item row="2" column="1">
-         <widget class="QTabWidget" name="menu_options">
-          <property name="currentIndex">
-           <number>3</number>
-          </property>
-          <widget class="QWidget" name="tab_10">
-           <attribute name="title">
-            <string>Add villager</string>
-           </attribute>
-           <layout class="QGridLayout" name="gridLayout_11">
-            <item row="0" column="0">
-             <widget class="QLabel" name="label_12">
-              <property name="text">
-               <string>Name</string>
-              </property>
-             </widget>
-            </item>
-            <item row="0" column="1">
-             <widget class="QLineEdit" name="villager_name_add"/>
-            </item>
-            <item row="1" column="0">
-             <widget class="QLabel" name="label_13">
-              <property name="text">
-               <string>Age</string>
-              </property>
-             </widget>
-            </item>
-            <item row="1" column="1">
-             <widget class="QSpinBox" name="villager_age_add"/>
-            </item>
-            <item row="2" column="0">
-             <widget class="QLabel" name="label_14">
-              <property name="text">
-               <string>Gender</string>
-              </property>
-             </widget>
-            </item>
-            <item row="2" column="1">
-             <widget class="QLineEdit" name="villager_gender_add"/>
-            </item>
-            <item row="3" column="0">
-             <widget class="QLabel" name="label_15">
-              <property name="text">
-               <string>Health</string>
-              </property>
-             </widget>
-            </item>
-            <item row="3" column="1">
-             <widget class="QSpinBox" name="villager_health_add"/>
-            </item>
-            <item row="4" column="1">
-             <widget class="QPushButton" name="push_villager_front">
-              <property name="text">
-               <string>Push villager to front</string>
-              </property>
-             </widget>
-            </item>
-            <item row="5" column="1">
-             <widget class="QPushButton" name="push_villager_back">
-              <property name="text">
-               <string>Push villager to back</string>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </widget>
-          <widget class="QWidget" name="tab_11">
-           <attribute name="title">
-            <string>Delete villager</string>
-           </attribute>
-           <layout class="QGridLayout" name="gridLayout_12">
-            <item row="0" column="1">
-             <widget class="QTabWidget" name="tabWidget_2">
-              <property name="currentIndex">
-               <number>2</number>
-              </property>
-              <widget class="QWidget" name="tab_16">
-               <attribute name="title">
-                <string>By name</string>
-               </attribute>
-               <layout class="QGridLayout" name="gridLayout_13">
-                <item row="0" column="0">
-                 <widget class="QLabel" name="label_16">
-                  <property name="text">
-                   <string>Villager name:</string>
-                  </property>
-                 </widget>
-                </item>
-                <item row="0" column="1">
-                 <widget class="QLineEdit" name="villager_delete_name_input"/>
-                </item>
-                <item row="1" column="1">
-                 <widget class="QPushButton" name="delete_villager_name_submit">
-                  <property name="text">
-                   <string>Delete villager</string>
-                  </property>
-                 </widget>
-                </item>
-               </layout>
-              </widget>
-              <widget class="QWidget" name="tab_14">
-               <attribute name="title">
-                <string>By health</string>
-               </attribute>
-               <layout class="QGridLayout" name="gridLayout_14">
-                <item row="0" column="0">
-                 <widget class="QLabel" name="label_17">
-                  <property name="text">
-                   <string>Health: </string>
-                  </property>
-                 </widget>
-                </item>
-                <item row="0" column="1">
-                 <widget class="QSpinBox" name="delete_villager_health_input">
-                  <property name="maximum">
-                   <number>100</number>
-                  </property>
-                 </widget>
-                </item>
-                <item row="1" column="0" colspan="2">
-                 <widget class="QPushButton" name="delete_villager_health_submit">
-                  <property name="text">
-                   <string>Delete all villagers weaker than this</string>
-                  </property>
-                 </widget>
-                </item>
-               </layout>
-              </widget>
-              <widget class="QWidget" name="tab_15">
-               <attribute name="title">
-                <string>By age</string>
-               </attribute>
-               <layout class="QGridLayout" name="gridLayout_15">
-                <item row="0" column="0">
-                 <widget class="QPushButton" name="delete_old_villagers">
-                  <property name="text">
-                   <string>Delete villagers older than 60</string>
-                  </property>
-                 </widget>
-                </item>
-               </layout>
-              </widget>
-             </widget>
-            </item>
-           </layout>
-          </widget>
-          <widget class="QWidget" name="tab_12">
-           <attribute name="title">
-            <string>Order villagers</string>
-           </attribute>
-           <layout class="QGridLayout" name="gridLayout_16">
-            <item row="0" column="0">
-             <widget class="QPushButton" name="order_villagers_name_submit">
-              <property name="text">
-               <string>Order villagers by name</string>
-              </property>
-             </widget>
-            </item>
-            <item row="1" column="0">
-             <widget class="QPushButton" name="order_villagers_age_submit">
-              <property name="text">
-               <string>Order villagers by age</string>
-              </property>
-             </widget>
-            </item>
-            <item row="2" column="0">
-             <widget class="QPushButton" name="order_villagers_by_health">
-              <property name="text">
-               <string>Order villagers by health</string>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </widget>
-          <widget class="QWidget" name="tab_13">
-           <attribute name="title">
-            <string>Show villagers</string>
-           </attribute>
-           <layout class="QGridLayout" name="gridLayout_17">
-            <item row="0" column="0">
-             <widget class="QPushButton" name="show_villagers_input">
-              <property name="text">
-               <string>Show villagers</string>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </widget>
          </widget>
         </item>
        </layout>

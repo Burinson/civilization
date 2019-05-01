@@ -1,3 +1,9 @@
-maya
-0
-0
+Maya
+4
+2
+Azteka
+7
+4
+Romana
+3
+1

@@ -53,19 +53,23 @@ OBJECTS_DIR   = ./
 SOURCES       = ../interfaz/main.cpp \
 		../interfaz/mainwindow.cpp \
 		../interfaz/civilization.cpp \
+		../interfaz/ship.cpp \
 		../interfaz/videogame.cpp \
 		../interfaz/table.cpp \
 		../interfaz/villager.cpp \
-		../interfaz/villagerdisplay.cpp moc_mainwindow.cpp \
+		../interfaz/villagerdisplay.cpp \
+		../interfaz/warrior.cpp moc_mainwindow.cpp \
 		moc_table.cpp \
 		moc_villagerdisplay.cpp
 OBJECTS       = main.o \
 		mainwindow.o \
 		civilization.o \
+		ship.o \
 		videogame.o \
 		table.o \
 		villager.o \
 		villagerdisplay.o \
+		warrior.o \
 		moc_mainwindow.o \
 		moc_table.o \
 		moc_villagerdisplay.o
@@ -261,16 +265,20 @@ DIST          = /home/uriel/Downloads/Qt/5.12.0/gcc_64/mkspecs/features/spec_pre
 		/home/uriel/Downloads/Qt/5.12.0/gcc_64/mkspecs/features/lex.prf \
 		../interfaz/interfaz.pro ../interfaz/mainwindow.h \
 		../interfaz/civilization.h \
+		../interfaz/ship.h \
 		../interfaz/videogame.h \
 		../interfaz/table.h \
 		../interfaz/villager.h \
-		../interfaz/villagerdisplay.h ../interfaz/main.cpp \
+		../interfaz/villagerdisplay.h \
+		../interfaz/warrior.h ../interfaz/main.cpp \
 		../interfaz/mainwindow.cpp \
 		../interfaz/civilization.cpp \
+		../interfaz/ship.cpp \
 		../interfaz/videogame.cpp \
 		../interfaz/table.cpp \
 		../interfaz/villager.cpp \
-		../interfaz/villagerdisplay.cpp
+		../interfaz/villagerdisplay.cpp \
+		../interfaz/warrior.cpp
 QMAKE_TARGET  = interfaz
 DESTDIR       = 
 TARGET        = interfaz
@@ -686,8 +694,8 @@ distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents /home/uriel/Downloads/Qt/5.12.0/gcc_64/mkspecs/features/data/dummy.cpp $(DISTDIR)/
-	$(COPY_FILE) --parents ../interfaz/mainwindow.h ../interfaz/civilization.h ../interfaz/videogame.h ../interfaz/table.h ../interfaz/villager.h ../interfaz/villagerdisplay.h $(DISTDIR)/
-	$(COPY_FILE) --parents ../interfaz/main.cpp ../interfaz/mainwindow.cpp ../interfaz/civilization.cpp ../interfaz/videogame.cpp ../interfaz/table.cpp ../interfaz/villager.cpp ../interfaz/villagerdisplay.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents ../interfaz/mainwindow.h ../interfaz/civilization.h ../interfaz/ship.h ../interfaz/videogame.h ../interfaz/table.h ../interfaz/villager.h ../interfaz/villagerdisplay.h ../interfaz/warrior.h $(DISTDIR)/
+	$(COPY_FILE) --parents ../interfaz/main.cpp ../interfaz/mainwindow.cpp ../interfaz/civilization.cpp ../interfaz/ship.cpp ../interfaz/videogame.cpp ../interfaz/table.cpp ../interfaz/villager.cpp ../interfaz/villagerdisplay.cpp ../interfaz/warrior.cpp $(DISTDIR)/
 	$(COPY_FILE) --parents ../interfaz/mainwindow.ui ../interfaz/table.ui ../interfaz/villagerdisplay.ui $(DISTDIR)/
 
 
@@ -832,7 +840,11 @@ moc_mainwindow.cpp: /home/uriel/Downloads/Qt/5.12.0/gcc_64/include/QtWidgets/QMa
 		../interfaz/videogame.h \
 		../interfaz/civilization.h \
 		../interfaz/villager.h \
+		../interfaz/ship.h \
+		../interfaz/warrior.h \
 		../interfaz/table.h \
+		../interfaz/villagerdisplay.h \
+		/home/uriel/Downloads/Qt/5.12.0/gcc_64/include/QtWidgets/QWidget \
 		../interfaz/mainwindow.h \
 		moc_predefs.h \
 		/home/uriel/Downloads/Qt/5.12.0/gcc_64/bin/moc
@@ -947,6 +959,8 @@ moc_table.cpp: /home/uriel/Downloads/Qt/5.12.0/gcc_64/include/QtWidgets/QMainWin
 		../interfaz/videogame.h \
 		../interfaz/civilization.h \
 		../interfaz/villager.h \
+		../interfaz/ship.h \
+		../interfaz/warrior.h \
 		../interfaz/table.h \
 		moc_predefs.h \
 		/home/uriel/Downloads/Qt/5.12.0/gcc_64/bin/moc
@@ -1057,6 +1071,8 @@ moc_villagerdisplay.cpp: /home/uriel/Downloads/Qt/5.12.0/gcc_64/include/QtWidget
 		/home/uriel/Downloads/Qt/5.12.0/gcc_64/include/QtGui/qtouchdevice.h \
 		../interfaz/civilization.h \
 		../interfaz/villager.h \
+		../interfaz/ship.h \
+		../interfaz/warrior.h \
 		../interfaz/villagerdisplay.h \
 		moc_predefs.h \
 		/home/uriel/Downloads/Qt/5.12.0/gcc_64/bin/moc
@@ -1201,7 +1217,11 @@ main.o: ../interfaz/main.cpp ../interfaz/mainwindow.h \
 		../interfaz/videogame.h \
 		../interfaz/civilization.h \
 		../interfaz/villager.h \
+		../interfaz/ship.h \
+		../interfaz/warrior.h \
 		../interfaz/table.h \
+		../interfaz/villagerdisplay.h \
+		/home/uriel/Downloads/Qt/5.12.0/gcc_64/include/QtWidgets/QWidget \
 		/home/uriel/Downloads/Qt/5.12.0/gcc_64/include/QtWidgets/QApplication \
 		/home/uriel/Downloads/Qt/5.12.0/gcc_64/include/QtWidgets/qapplication.h \
 		/home/uriel/Downloads/Qt/5.12.0/gcc_64/include/QtCore/qcoreapplication.h \
@@ -1321,7 +1341,11 @@ mainwindow.o: ../interfaz/mainwindow.cpp ../interfaz/mainwindow.h \
 		../interfaz/videogame.h \
 		../interfaz/civilization.h \
 		../interfaz/villager.h \
+		../interfaz/ship.h \
+		../interfaz/warrior.h \
 		../interfaz/table.h \
+		../interfaz/villagerdisplay.h \
+		/home/uriel/Downloads/Qt/5.12.0/gcc_64/include/QtWidgets/QWidget \
 		ui_mainwindow.h \
 		/home/uriel/Downloads/Qt/5.12.0/gcc_64/include/QtCore/QVariant \
 		/home/uriel/Downloads/Qt/5.12.0/gcc_64/include/QtWidgets/QAction \
@@ -1375,7 +1399,6 @@ mainwindow.o: ../interfaz/mainwindow.cpp ../interfaz/mainwindow.h \
 		/home/uriel/Downloads/Qt/5.12.0/gcc_64/include/QtWidgets/QTabWidget \
 		/home/uriel/Downloads/Qt/5.12.0/gcc_64/include/QtWidgets/QToolBar \
 		/home/uriel/Downloads/Qt/5.12.0/gcc_64/include/QtWidgets/qtoolbar.h \
-		/home/uriel/Downloads/Qt/5.12.0/gcc_64/include/QtWidgets/QWidget \
 		/home/uriel/Downloads/Qt/5.12.0/gcc_64/include/QtCore/QDebug \
 		/home/uriel/Downloads/Qt/5.12.0/gcc_64/include/QtWidgets/QFileDialog \
 		/home/uriel/Downloads/Qt/5.12.0/gcc_64/include/QtWidgets/qfiledialog.h \
@@ -1387,12 +1410,20 @@ mainwindow.o: ../interfaz/mainwindow.cpp ../interfaz/mainwindow.h \
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o mainwindow.o ../interfaz/mainwindow.cpp
 
 civilization.o: ../interfaz/civilization.cpp ../interfaz/civilization.h \
-		../interfaz/villager.h
+		../interfaz/villager.h \
+		../interfaz/ship.h \
+		../interfaz/warrior.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o civilization.o ../interfaz/civilization.cpp
+
+ship.o: ../interfaz/ship.cpp ../interfaz/ship.h \
+		../interfaz/warrior.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o ship.o ../interfaz/ship.cpp
 
 videogame.o: ../interfaz/videogame.cpp ../interfaz/videogame.h \
 		../interfaz/civilization.h \
-		../interfaz/villager.h
+		../interfaz/villager.h \
+		../interfaz/ship.h \
+		../interfaz/warrior.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o videogame.o ../interfaz/videogame.cpp
 
 table.o: ../interfaz/table.cpp ../interfaz/table.h \
@@ -1505,6 +1536,8 @@ table.o: ../interfaz/table.cpp ../interfaz/table.h \
 		../interfaz/videogame.h \
 		../interfaz/civilization.h \
 		../interfaz/villager.h \
+		../interfaz/ship.h \
+		../interfaz/warrior.h \
 		ui_table.h \
 		/home/uriel/Downloads/Qt/5.12.0/gcc_64/include/QtCore/QVariant \
 		/home/uriel/Downloads/Qt/5.12.0/gcc_64/include/QtWidgets/QApplication \
@@ -1673,8 +1706,61 @@ villagerdisplay.o: ../interfaz/villagerdisplay.cpp ../interfaz/villagerdisplay.h
 		/home/uriel/Downloads/Qt/5.12.0/gcc_64/include/QtGui/qtouchdevice.h \
 		../interfaz/civilization.h \
 		../interfaz/villager.h \
-		ui_villagerdisplay.h
+		../interfaz/ship.h \
+		../interfaz/warrior.h \
+		ui_villagerdisplay.h \
+		/home/uriel/Downloads/Qt/5.12.0/gcc_64/include/QtCore/QVariant \
+		/home/uriel/Downloads/Qt/5.12.0/gcc_64/include/QtWidgets/QApplication \
+		/home/uriel/Downloads/Qt/5.12.0/gcc_64/include/QtWidgets/qapplication.h \
+		/home/uriel/Downloads/Qt/5.12.0/gcc_64/include/QtCore/qcoreapplication.h \
+		/home/uriel/Downloads/Qt/5.12.0/gcc_64/include/QtCore/qeventloop.h \
+		/home/uriel/Downloads/Qt/5.12.0/gcc_64/include/QtWidgets/qdesktopwidget.h \
+		/home/uriel/Downloads/Qt/5.12.0/gcc_64/include/QtGui/qguiapplication.h \
+		/home/uriel/Downloads/Qt/5.12.0/gcc_64/include/QtGui/qinputmethod.h \
+		/home/uriel/Downloads/Qt/5.12.0/gcc_64/include/QtWidgets/QGridLayout \
+		/home/uriel/Downloads/Qt/5.12.0/gcc_64/include/QtWidgets/qgridlayout.h \
+		/home/uriel/Downloads/Qt/5.12.0/gcc_64/include/QtWidgets/qlayout.h \
+		/home/uriel/Downloads/Qt/5.12.0/gcc_64/include/QtWidgets/qlayoutitem.h \
+		/home/uriel/Downloads/Qt/5.12.0/gcc_64/include/QtWidgets/qboxlayout.h \
+		/home/uriel/Downloads/Qt/5.12.0/gcc_64/include/QtWidgets/QHeaderView \
+		/home/uriel/Downloads/Qt/5.12.0/gcc_64/include/QtWidgets/qheaderview.h \
+		/home/uriel/Downloads/Qt/5.12.0/gcc_64/include/QtWidgets/qabstractitemview.h \
+		/home/uriel/Downloads/Qt/5.12.0/gcc_64/include/QtWidgets/qabstractscrollarea.h \
+		/home/uriel/Downloads/Qt/5.12.0/gcc_64/include/QtWidgets/qframe.h \
+		/home/uriel/Downloads/Qt/5.12.0/gcc_64/include/QtCore/qabstractitemmodel.h \
+		/home/uriel/Downloads/Qt/5.12.0/gcc_64/include/QtCore/qitemselectionmodel.h \
+		/home/uriel/Downloads/Qt/5.12.0/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
+		/home/uriel/Downloads/Qt/5.12.0/gcc_64/include/QtWidgets/qstyleoption.h \
+		/home/uriel/Downloads/Qt/5.12.0/gcc_64/include/QtWidgets/qabstractspinbox.h \
+		/home/uriel/Downloads/Qt/5.12.0/gcc_64/include/QtGui/qvalidator.h \
+		/home/uriel/Downloads/Qt/5.12.0/gcc_64/include/QtCore/qregularexpression.h \
+		/home/uriel/Downloads/Qt/5.12.0/gcc_64/include/QtGui/qicon.h \
+		/home/uriel/Downloads/Qt/5.12.0/gcc_64/include/QtWidgets/qslider.h \
+		/home/uriel/Downloads/Qt/5.12.0/gcc_64/include/QtWidgets/qabstractslider.h \
+		/home/uriel/Downloads/Qt/5.12.0/gcc_64/include/QtWidgets/qstyle.h \
+		/home/uriel/Downloads/Qt/5.12.0/gcc_64/include/QtWidgets/qtabbar.h \
+		/home/uriel/Downloads/Qt/5.12.0/gcc_64/include/QtWidgets/qtabwidget.h \
+		/home/uriel/Downloads/Qt/5.12.0/gcc_64/include/QtWidgets/qrubberband.h \
+		/home/uriel/Downloads/Qt/5.12.0/gcc_64/include/QtWidgets/QPlainTextEdit \
+		/home/uriel/Downloads/Qt/5.12.0/gcc_64/include/QtWidgets/qplaintextedit.h \
+		/home/uriel/Downloads/Qt/5.12.0/gcc_64/include/QtWidgets/qtextedit.h \
+		/home/uriel/Downloads/Qt/5.12.0/gcc_64/include/QtGui/qtextdocument.h \
+		/home/uriel/Downloads/Qt/5.12.0/gcc_64/include/QtGui/qtextoption.h \
+		/home/uriel/Downloads/Qt/5.12.0/gcc_64/include/QtGui/qtextcursor.h \
+		/home/uriel/Downloads/Qt/5.12.0/gcc_64/include/QtGui/qtextformat.h \
+		/home/uriel/Downloads/Qt/5.12.0/gcc_64/include/QtGui/qpen.h \
+		/home/uriel/Downloads/Qt/5.12.0/gcc_64/include/QtGui/qabstracttextdocumentlayout.h \
+		/home/uriel/Downloads/Qt/5.12.0/gcc_64/include/QtGui/qtextlayout.h \
+		/home/uriel/Downloads/Qt/5.12.0/gcc_64/include/QtGui/qglyphrun.h \
+		/home/uriel/Downloads/Qt/5.12.0/gcc_64/include/QtGui/qrawfont.h \
+		/home/uriel/Downloads/Qt/5.12.0/gcc_64/include/QtGui/qfontdatabase.h \
+		/home/uriel/Downloads/Qt/5.12.0/gcc_64/include/QtWidgets/QTableWidget \
+		/home/uriel/Downloads/Qt/5.12.0/gcc_64/include/QtWidgets/qtablewidget.h \
+		/home/uriel/Downloads/Qt/5.12.0/gcc_64/include/QtWidgets/qtableview.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o villagerdisplay.o ../interfaz/villagerdisplay.cpp
+
+warrior.o: ../interfaz/warrior.cpp ../interfaz/warrior.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o warrior.o ../interfaz/warrior.cpp
 
 moc_mainwindow.o: moc_mainwindow.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_mainwindow.o moc_mainwindow.cpp

@@ -3,6 +3,7 @@
 #include <iostream>
 #include <list>
 #include "villager.h"
+#include "ship.h"
 using namespace std;
 
 class Civilization
@@ -11,6 +12,7 @@ class Civilization
     int x;
     int y;
     list<Villager> villagers;
+    list<Ship*> port;
 
 public:
     Civilization();
@@ -43,6 +45,8 @@ public:
         Villager v = *it;
         return v;
     }
+
+    void addShip(Ship *ship);
 };
 
 #endif // CIVILIZACION_H

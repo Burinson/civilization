@@ -377,3 +377,19 @@ void MainWindow::on_recover_input_clicked()
     videogame.recover();
     qDebug() << "[✔] Civilizations recovered";
 }
+
+/**
+ * Capture ships
+ */
+void MainWindow::on_add_ship_clicked()
+{
+    Ship *s = new Ship();
+    Civilization *c = videogame.searchCivilization(ui->civilization_search_input->text().toStdString());
+
+    s->setId(ui->ship_id->text().toStdString());
+    s->setFuel(ui->ship_fuel->value());
+    c->addShip(s);
+
+    qDebug() << "[✔] Ship added";
+
+}
