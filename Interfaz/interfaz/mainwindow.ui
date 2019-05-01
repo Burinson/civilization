@@ -505,7 +505,7 @@
             <item row="0" column="0">
              <widget class="QTabWidget" name="tabWidget_4">
               <property name="currentIndex">
-               <number>0</number>
+               <number>2</number>
               </property>
               <widget class="QWidget" name="tab_21">
                <attribute name="title">
@@ -549,11 +549,151 @@
                <attribute name="title">
                 <string>Show ships</string>
                </attribute>
+               <layout class="QGridLayout" name="gridLayout_24">
+                <item row="0" column="0">
+                 <widget class="QPushButton" name="showShips">
+                  <property name="text">
+                   <string>Show ships</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
               </widget>
               <widget class="QWidget" name="tab_23">
                <attribute name="title">
                 <string>Search ships</string>
                </attribute>
+               <layout class="QGridLayout" name="gridLayout_25">
+                <item row="0" column="1">
+                 <widget class="QLineEdit" name="id_search"/>
+                </item>
+                <item row="0" column="0">
+                 <widget class="QLabel" name="label_20">
+                  <property name="text">
+                   <string>Ship ID: </string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="0" colspan="2">
+                 <widget class="QTabWidget" name="tabWidget_6">
+                  <property name="currentIndex">
+                   <number>0</number>
+                  </property>
+                  <widget class="QWidget" name="tab_27">
+                   <attribute name="title">
+                    <string>Add warrior</string>
+                   </attribute>
+                   <layout class="QGridLayout" name="gridLayout_26">
+                    <item row="0" column="0">
+                     <widget class="QLabel" name="label_21">
+                      <property name="text">
+                       <string>ID:</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="0" column="1" colspan="2">
+                     <widget class="QLineEdit" name="warriorID"/>
+                    </item>
+                    <item row="1" column="0">
+                     <widget class="QLabel" name="label_22">
+                      <property name="text">
+                       <string>Health:</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="2" column="0">
+                     <widget class="QLabel" name="label_23">
+                      <property name="text">
+                       <string>Strength:</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="2" column="1" colspan="2">
+                     <widget class="QDoubleSpinBox" name="warriorStrength">
+                      <property name="maximum">
+                       <double>60.000000000000000</double>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="3" column="0">
+                     <widget class="QLabel" name="label_24">
+                      <property name="text">
+                       <string>Shield:</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="3" column="1" colspan="2">
+                     <widget class="QDoubleSpinBox" name="warriorShield">
+                      <property name="maximum">
+                       <double>30.000000000000000</double>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="4" column="0">
+                     <widget class="QLabel" name="label_25">
+                      <property name="text">
+                       <string>Type:</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="4" column="1" colspan="2">
+                     <widget class="QComboBox" name="warriorType">
+                      <item>
+                       <property name="text">
+                        <string>Thrower</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Paladin</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Knight</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Archer</string>
+                       </property>
+                      </item>
+                     </widget>
+                    </item>
+                    <item row="5" column="1" colspan="2">
+                     <widget class="QPushButton" name="addWarrior">
+                      <property name="text">
+                       <string>Add warrior</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="1" column="1" colspan="2">
+                     <widget class="QSpinBox" name="warriorHealth">
+                      <property name="maximum">
+                       <number>100</number>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                  <widget class="QWidget" name="tab_28">
+                   <attribute name="title">
+                    <string>Delete warrior</string>
+                   </attribute>
+                  </widget>
+                  <widget class="QWidget" name="tab_29">
+                   <attribute name="title">
+                    <string>Show last warrior</string>
+                   </attribute>
+                  </widget>
+                  <widget class="QWidget" name="tab_30">
+                   <attribute name="title">
+                    <string>Show all warriors</string>
+                   </attribute>
+                  </widget>
+                 </widget>
+                </item>
+               </layout>
               </widget>
               <widget class="QWidget" name="tab_24">
                <attribute name="title">

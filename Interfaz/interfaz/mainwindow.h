@@ -5,6 +5,7 @@
 #include "videogame.h"
 #include "table.h"
 #include "villagerdisplay.h"
+#include "shipdisplay.h"
 
 namespace Ui {
 class MainWindow;
@@ -61,11 +62,16 @@ private slots:
 
     void on_add_ship_clicked();
 
+    void on_showShips_clicked();
+
+    void on_addWarrior_clicked();
+
 private:
     Ui::MainWindow *ui;
     VideoGame videogame;
     Table table;
     villagerdisplay villagerDisplay;
+    ShipDisplay shipdisplay;
     bool flag = false;
 };
 

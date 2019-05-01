@@ -46,7 +46,17 @@ public:
         return v;
     }
 
+    Ship *operator[](int n) {
+        auto it = port.begin();
+        advance(it, n);
+        Ship *s = *it;
+        return s;
+    }
+
     void addShip(Ship *ship);
+    size_t shipSize() const;
+    Ship* getShip(string &id) const;
+    bool shipExists(string &id) const;
 };
 
 #endif // CIVILIZACION_H

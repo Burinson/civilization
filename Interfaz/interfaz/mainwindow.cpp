@@ -383,13 +383,60 @@ void MainWindow::on_recover_input_clicked()
  */
 void MainWindow::on_add_ship_clicked()
 {
-    Ship *s = new Ship();
-    Civilization *c = videogame.searchCivilization(ui->civilization_search_input->text().toStdString());
+    if(flag) {
+        Ship *s = new Ship();
+        Civilization *c = videogame.searchCivilization(ui->civilization_search_input->text().toStdString());
 
-    s->setId(ui->ship_id->text().toStdString());
-    s->setFuel(ui->ship_fuel->value());
-    c->addShip(s);
+        s->setId(ui->ship_id->text().toStdString());
+        s->setFuel(ui->ship_fuel->value());
+        c->addShip(s);
 
-    qDebug() << "[✔] Ship added";
+        qDebug() << "[✔] Ship added";
+    } else
+        QMessageBox::information(this, "Error", "Civilization not found");
+
+}
+
+/**
+ * Show ships
+ */
+void MainWindow::on_showShips_clicked()
+{
+    if(flag) {
+        Civilization *c = videogame.searchCivilization(ui->civilization_search_input->text().toStdString());
+
+        shipdisplay.show();
+        shipdisplay.setCivilization(c);
+        qDebug() << "[✔] Showing ships";
+    } else
+        QMessageBox::information(this, "Error", "Civilization not found");
+}
+
+/**
+ * Add warrior
+ */
+void MainWindow::on_addWarrior_clicked()
+{
+    if(flag) {
+        Civilization *c = videogame.searchCivilization(ui->civilization_search_input->text().toStdString());
+        string id = ui->id_search->text().toStdString();
+        if (c->shipExists(id)) {
+            Ship *s = c->getShip(id);
+
+            Warrior w;
+            w.setId(ui->warriorID->text().toStdString());
+            w.setHealth(ui->warriorHealth->value());
+            w.setStrength(ui->warriorStrength->value());
+            w.setShield(ui->warriorShield->value());
+            w.setType(ui->warriorType->currentText().toStdString());
+
+            s->addWarrior(w);
+            qDebug() << "[✔] Warrior added";
+
+        } else
+            QMessageBox::information(this, "Error", "Ship does not exist");
+
+    } else
+        QMessageBox::information(this, "Error", "Civilization not found");
 
 }

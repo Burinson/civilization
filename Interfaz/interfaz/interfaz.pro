@@ -29,6 +29,7 @@ SOURCES += \
         mainwindow.cpp \
     civilization.cpp \
     ship.cpp \
+    shipdisplay.cpp \
     videogame.cpp \
     table.cpp \
     villager.cpp \
@@ -39,6 +40,7 @@ HEADERS += \
         mainwindow.h \
     civilization.h \
     ship.h \
+    shipdisplay.h \
     videogame.h \
     table.h \
     villager.h \
@@ -47,6 +49,7 @@ HEADERS += \
 
 FORMS += \
         mainwindow.ui \
+    shipdisplay.ui \
     table.ui \
     villagerdisplay.ui
 

@@ -28,6 +28,8 @@ public:
     void addWarrior(Warrior &warrior);
     void deleteWarrior();
     Warrior top() const;
+    size_t size() const;
+
 };
 
 #endif // SHIP_H

@@ -12,6 +12,7 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QComboBox>
 #include <QtWidgets/QDoubleSpinBox>
 #include <QtWidgets/QGridLayout>
 #include <QtWidgets/QLabel>
@@ -140,7 +141,29 @@ public:
     QLabel *label_18;
     QPushButton *add_ship;
     QWidget *tab_22;
+    QGridLayout *gridLayout_24;
+    QPushButton *showShips;
     QWidget *tab_23;
+    QGridLayout *gridLayout_25;
+    QLineEdit *id_search;
+    QLabel *label_20;
+    QTabWidget *tabWidget_6;
+    QWidget *tab_27;
+    QGridLayout *gridLayout_26;
+    QLabel *label_21;
+    QLineEdit *warriorID;
+    QLabel *label_22;
+    QLabel *label_23;
+    QDoubleSpinBox *warriorStrength;
+    QLabel *label_24;
+    QDoubleSpinBox *warriorShield;
+    QLabel *label_25;
+    QComboBox *warriorType;
+    QPushButton *addWarrior;
+    QSpinBox *warriorHealth;
+    QWidget *tab_28;
+    QWidget *tab_29;
+    QWidget *tab_30;
     QWidget *tab_24;
     QGridLayout *gridLayout_22;
     QTabWidget *tabWidget_5;
@@ -630,9 +653,112 @@ public:
         tabWidget_4->addTab(tab_21, QString());
         tab_22 = new QWidget();
         tab_22->setObjectName(QString::fromUtf8("tab_22"));
+        gridLayout_24 = new QGridLayout(tab_22);
+        gridLayout_24->setSpacing(6);
+        gridLayout_24->setContentsMargins(11, 11, 11, 11);
+        gridLayout_24->setObjectName(QString::fromUtf8("gridLayout_24"));
+        showShips = new QPushButton(tab_22);
+        showShips->setObjectName(QString::fromUtf8("showShips"));
+
+        gridLayout_24->addWidget(showShips, 0, 0, 1, 1);
+
         tabWidget_4->addTab(tab_22, QString());
         tab_23 = new QWidget();
         tab_23->setObjectName(QString::fromUtf8("tab_23"));
+        gridLayout_25 = new QGridLayout(tab_23);
+        gridLayout_25->setSpacing(6);
+        gridLayout_25->setContentsMargins(11, 11, 11, 11);
+        gridLayout_25->setObjectName(QString::fromUtf8("gridLayout_25"));
+        id_search = new QLineEdit(tab_23);
+        id_search->setObjectName(QString::fromUtf8("id_search"));
+
+        gridLayout_25->addWidget(id_search, 0, 1, 1, 1);
+
+        label_20 = new QLabel(tab_23);
+        label_20->setObjectName(QString::fromUtf8("label_20"));
+
+        gridLayout_25->addWidget(label_20, 0, 0, 1, 1);
+
+        tabWidget_6 = new QTabWidget(tab_23);
+        tabWidget_6->setObjectName(QString::fromUtf8("tabWidget_6"));
+        tab_27 = new QWidget();
+        tab_27->setObjectName(QString::fromUtf8("tab_27"));
+        gridLayout_26 = new QGridLayout(tab_27);
+        gridLayout_26->setSpacing(6);
+        gridLayout_26->setContentsMargins(11, 11, 11, 11);
+        gridLayout_26->setObjectName(QString::fromUtf8("gridLayout_26"));
+        label_21 = new QLabel(tab_27);
+        label_21->setObjectName(QString::fromUtf8("label_21"));
+
+        gridLayout_26->addWidget(label_21, 0, 0, 1, 1);
+
+        warriorID = new QLineEdit(tab_27);
+        warriorID->setObjectName(QString::fromUtf8("warriorID"));
+
+        gridLayout_26->addWidget(warriorID, 0, 1, 1, 2);
+
+        label_22 = new QLabel(tab_27);
+        label_22->setObjectName(QString::fromUtf8("label_22"));
+
+        gridLayout_26->addWidget(label_22, 1, 0, 1, 1);
+
+        label_23 = new QLabel(tab_27);
+        label_23->setObjectName(QString::fromUtf8("label_23"));
+
+        gridLayout_26->addWidget(label_23, 2, 0, 1, 1);
+
+        warriorStrength = new QDoubleSpinBox(tab_27);
+        warriorStrength->setObjectName(QString::fromUtf8("warriorStrength"));
+
+        gridLayout_26->addWidget(warriorStrength, 2, 1, 1, 2);
+
+        label_24 = new QLabel(tab_27);
+        label_24->setObjectName(QString::fromUtf8("label_24"));
+
+        gridLayout_26->addWidget(label_24, 3, 0, 1, 1);
+
+        warriorShield = new QDoubleSpinBox(tab_27);
+        warriorShield->setObjectName(QString::fromUtf8("warriorShield"));
+
+        gridLayout_26->addWidget(warriorShield, 3, 1, 1, 2);
+
+        label_25 = new QLabel(tab_27);
+        label_25->setObjectName(QString::fromUtf8("label_25"));
+
+        gridLayout_26->addWidget(label_25, 4, 0, 1, 1);
+
+        warriorType = new QComboBox(tab_27);
+        warriorType->addItem(QString());
+        warriorType->addItem(QString());
+        warriorType->addItem(QString());
+        warriorType->addItem(QString());
+        warriorType->setObjectName(QString::fromUtf8("warriorType"));
+
+        gridLayout_26->addWidget(warriorType, 4, 1, 1, 2);
+
+        addWarrior = new QPushButton(tab_27);
+        addWarrior->setObjectName(QString::fromUtf8("addWarrior"));
+
+        gridLayout_26->addWidget(addWarrior, 5, 1, 1, 2);
+
+        warriorHealth = new QSpinBox(tab_27);
+        warriorHealth->setObjectName(QString::fromUtf8("warriorHealth"));
+
+        gridLayout_26->addWidget(warriorHealth, 1, 1, 1, 2);
+
+        tabWidget_6->addTab(tab_27, QString());
+        tab_28 = new QWidget();
+        tab_28->setObjectName(QString::fromUtf8("tab_28"));
+        tabWidget_6->addTab(tab_28, QString());
+        tab_29 = new QWidget();
+        tab_29->setObjectName(QString::fromUtf8("tab_29"));
+        tabWidget_6->addTab(tab_29, QString());
+        tab_30 = new QWidget();
+        tab_30->setObjectName(QString::fromUtf8("tab_30"));
+        tabWidget_6->addTab(tab_30, QString());
+
+        gridLayout_25->addWidget(tabWidget_6, 1, 0, 1, 2);
+
         tabWidget_4->addTab(tab_23, QString());
         tab_24 = new QWidget();
         tab_24->setObjectName(QString::fromUtf8("tab_24"));
@@ -717,7 +843,8 @@ public:
         tabWidget_3->setCurrentIndex(1);
         menu_options->setCurrentIndex(0);
         tabWidget_2->setCurrentIndex(2);
-        tabWidget_4->setCurrentIndex(0);
+        tabWidget_4->setCurrentIndex(2);
+        tabWidget_6->setCurrentIndex(0);
         tabWidget_5->setCurrentIndex(1);
 
 
@@ -785,7 +912,24 @@ public:
         label_18->setText(QApplication::translate("MainWindow", "Id", nullptr));
         add_ship->setText(QApplication::translate("MainWindow", "Add ship", nullptr));
         tabWidget_4->setTabText(tabWidget_4->indexOf(tab_21), QApplication::translate("MainWindow", "Add ship", nullptr));
+        showShips->setText(QApplication::translate("MainWindow", "Show ships", nullptr));
         tabWidget_4->setTabText(tabWidget_4->indexOf(tab_22), QApplication::translate("MainWindow", "Show ships", nullptr));
+        label_20->setText(QApplication::translate("MainWindow", "Ship ID: ", nullptr));
+        label_21->setText(QApplication::translate("MainWindow", "ID:", nullptr));
+        label_22->setText(QApplication::translate("MainWindow", "Health:", nullptr));
+        label_23->setText(QApplication::translate("MainWindow", "Strength:", nullptr));
+        label_24->setText(QApplication::translate("MainWindow", "Shield:", nullptr));
+        label_25->setText(QApplication::translate("MainWindow", "Type:", nullptr));
+        warriorType->setItemText(0, QApplication::translate("MainWindow", "Thrower", nullptr));
+        warriorType->setItemText(1, QApplication::translate("MainWindow", "Paladin", nullptr));
+        warriorType->setItemText(2, QApplication::translate("MainWindow", "Knight", nullptr));
+        warriorType->setItemText(3, QApplication::translate("MainWindow", "Archer", nullptr));
+
+        addWarrior->setText(QApplication::translate("MainWindow", "Add warrior", nullptr));
+        tabWidget_6->setTabText(tabWidget_6->indexOf(tab_27), QApplication::translate("MainWindow", "Add warrior", nullptr));
+        tabWidget_6->setTabText(tabWidget_6->indexOf(tab_28), QApplication::translate("MainWindow", "Delete warrior", nullptr));
+        tabWidget_6->setTabText(tabWidget_6->indexOf(tab_29), QApplication::translate("MainWindow", "Show last warrior", nullptr));
+        tabWidget_6->setTabText(tabWidget_6->indexOf(tab_30), QApplication::translate("MainWindow", "Show all warriors", nullptr));
         tabWidget_4->setTabText(tabWidget_4->indexOf(tab_23), QApplication::translate("MainWindow", "Search ships", nullptr));
         tabWidget_5->setTabText(tabWidget_5->indexOf(tab_25), QApplication::translate("MainWindow", "By id", nullptr));
         tabWidget_5->setTabText(tabWidget_5->indexOf(tab_26), QApplication::translate("MainWindow", "By fuel", nullptr));

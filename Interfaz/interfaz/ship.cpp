@@ -55,6 +55,11 @@ Warrior Ship::top() const
     return warriors.top();
 }
 
+size_t Ship::size() const
+{
+    return warriors.size();
+}
+
 Ship::Ship()
 {
     this->speed = 0;

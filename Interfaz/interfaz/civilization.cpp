@@ -130,6 +130,37 @@ void Civilization::addShip(Ship *ship)
     port.push_back(ship);
 }
 
+size_t Civilization::shipSize() const
+{
+    return port.size();
+}
+
+Ship *Civilization::getShip(string &id) const
+{
+    Ship* ship;
+    for(auto s : port) {
+        if (s->getId() == id) {
+            ship = s;
+            break;
+        }
+    }
+    return ship;
+}
+
+bool Civilization::shipExists(string &id) const
+{
+    bool exists = false;
+    for(auto s : port) {
+        if (s->getId() == id) {
+            exists = true;
+            break;
+        }
+    }
+    return exists;
+}
+
+
+
 Civilization::Civilization()
 {
 
