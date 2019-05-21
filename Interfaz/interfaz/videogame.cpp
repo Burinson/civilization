@@ -110,7 +110,6 @@ void VideoGame::recover()
                 break;
             c.setName(line);
 
-
             ifstream village(line + ".txt");
             if(village.is_open()) {
                 while(!village.eof()) {
@@ -134,7 +133,6 @@ void VideoGame::recover()
                     c.push_villager_back(v);
                 }
             }
-
             getline(file, line);
             c.setX(stoi(line));
 
@@ -144,8 +142,6 @@ void VideoGame::recover()
             addCivilization(c, pos++);
         }
     }
-
-
 }
 
 VideoGame::VideoGame()

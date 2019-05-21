@@ -1,0 +1,8 @@
+aldeano1
+12
+M
+50
+aldeano2
+22
+F
+60

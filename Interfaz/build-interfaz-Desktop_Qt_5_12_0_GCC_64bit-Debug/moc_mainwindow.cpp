@@ -21,8 +21,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_MainWindow_t {
-    QByteArrayData data[30];
-    char stringdata0[893];
+    QByteArrayData data[33];
+    char stringdata0[979];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -60,7 +60,10 @@ QT_MOC_LITERAL(25, 753, 24), // "on_deleteWarrior_clicked"
 QT_MOC_LITERAL(26, 778, 22), // "on_lastWarrior_clicked"
 QT_MOC_LITERAL(27, 801, 23), // "on_showWarriors_clicked"
 QT_MOC_LITERAL(28, 825, 32), // "on_ship_id_delete_button_clicked"
-QT_MOC_LITERAL(29, 858, 34) // "on_ship_fuel_delete_button_cl..."
+QT_MOC_LITERAL(29, 858, 34), // "on_ship_fuel_delete_button_cl..."
+QT_MOC_LITERAL(30, 893, 27), // "on_add_ships_battle_clicked"
+QT_MOC_LITERAL(31, 921, 29), // "on_battle_remove_ship_clicked"
+QT_MOC_LITERAL(32, 951, 27) // "on_show_battlefield_clicked"
 
     },
     "MainWindow\0on_register_submit_clicked\0"
@@ -86,7 +89,10 @@ QT_MOC_LITERAL(29, 858, 34) // "on_ship_fuel_delete_button_cl..."
     "on_addWarrior_clicked\0on_deleteWarrior_clicked\0"
     "on_lastWarrior_clicked\0on_showWarriors_clicked\0"
     "on_ship_id_delete_button_clicked\0"
-    "on_ship_fuel_delete_button_clicked"
+    "on_ship_fuel_delete_button_clicked\0"
+    "on_add_ships_battle_clicked\0"
+    "on_battle_remove_ship_clicked\0"
+    "on_show_battlefield_clicked"
 };
 #undef QT_MOC_LITERAL
 
@@ -96,7 +102,7 @@ static const uint qt_meta_data_MainWindow[] = {
        8,       // revision
        0,       // classname
        0,    0, // classinfo
-      28,   14, // methods
+      31,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -104,36 +110,42 @@ static const uint qt_meta_data_MainWindow[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    0,  154,    2, 0x08 /* Private */,
-       3,    0,  155,    2, 0x08 /* Private */,
-       4,    0,  156,    2, 0x08 /* Private */,
-       5,    0,  157,    2, 0x08 /* Private */,
-       6,    0,  158,    2, 0x08 /* Private */,
-       7,    0,  159,    2, 0x08 /* Private */,
-       8,    0,  160,    2, 0x08 /* Private */,
-       9,    0,  161,    2, 0x08 /* Private */,
-      10,    0,  162,    2, 0x08 /* Private */,
-      11,    0,  163,    2, 0x08 /* Private */,
-      12,    0,  164,    2, 0x08 /* Private */,
-      13,    0,  165,    2, 0x08 /* Private */,
-      14,    0,  166,    2, 0x08 /* Private */,
-      15,    0,  167,    2, 0x08 /* Private */,
-      16,    0,  168,    2, 0x08 /* Private */,
-      17,    0,  169,    2, 0x08 /* Private */,
-      18,    0,  170,    2, 0x08 /* Private */,
-      19,    0,  171,    2, 0x08 /* Private */,
-      20,    0,  172,    2, 0x08 /* Private */,
-      21,    0,  173,    2, 0x08 /* Private */,
-      22,    0,  174,    2, 0x08 /* Private */,
-      23,    0,  175,    2, 0x08 /* Private */,
-      24,    0,  176,    2, 0x08 /* Private */,
-      25,    0,  177,    2, 0x08 /* Private */,
-      26,    0,  178,    2, 0x08 /* Private */,
-      27,    0,  179,    2, 0x08 /* Private */,
-      28,    0,  180,    2, 0x08 /* Private */,
-      29,    0,  181,    2, 0x08 /* Private */,
+       1,    0,  169,    2, 0x08 /* Private */,
+       3,    0,  170,    2, 0x08 /* Private */,
+       4,    0,  171,    2, 0x08 /* Private */,
+       5,    0,  172,    2, 0x08 /* Private */,
+       6,    0,  173,    2, 0x08 /* Private */,
+       7,    0,  174,    2, 0x08 /* Private */,
+       8,    0,  175,    2, 0x08 /* Private */,
+       9,    0,  176,    2, 0x08 /* Private */,
+      10,    0,  177,    2, 0x08 /* Private */,
+      11,    0,  178,    2, 0x08 /* Private */,
+      12,    0,  179,    2, 0x08 /* Private */,
+      13,    0,  180,    2, 0x08 /* Private */,
+      14,    0,  181,    2, 0x08 /* Private */,
+      15,    0,  182,    2, 0x08 /* Private */,
+      16,    0,  183,    2, 0x08 /* Private */,
+      17,    0,  184,    2, 0x08 /* Private */,
+      18,    0,  185,    2, 0x08 /* Private */,
+      19,    0,  186,    2, 0x08 /* Private */,
+      20,    0,  187,    2, 0x08 /* Private */,
+      21,    0,  188,    2, 0x08 /* Private */,
+      22,    0,  189,    2, 0x08 /* Private */,
+      23,    0,  190,    2, 0x08 /* Private */,
+      24,    0,  191,    2, 0x08 /* Private */,
+      25,    0,  192,    2, 0x08 /* Private */,
+      26,    0,  193,    2, 0x08 /* Private */,
+      27,    0,  194,    2, 0x08 /* Private */,
+      28,    0,  195,    2, 0x08 /* Private */,
+      29,    0,  196,    2, 0x08 /* Private */,
+      30,    0,  197,    2, 0x08 /* Private */,
+      31,    0,  198,    2, 0x08 /* Private */,
+      32,    0,  199,    2, 0x08 /* Private */,
 
  // slots: parameters
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
@@ -200,6 +212,9 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 25: _t->on_showWarriors_clicked(); break;
         case 26: _t->on_ship_id_delete_button_clicked(); break;
         case 27: _t->on_ship_fuel_delete_button_clicked(); break;
+        case 28: _t->on_add_ships_battle_clicked(); break;
+        case 29: _t->on_battle_remove_ship_clicked(); break;
+        case 30: _t->on_show_battlefield_clicked(); break;
         default: ;
         }
     }
@@ -235,13 +250,13 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 28)
+        if (_id < 31)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 28;
+        _id -= 31;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 28)
+        if (_id < 31)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 28;
+        _id -= 31;
     }
     return _id;
 }

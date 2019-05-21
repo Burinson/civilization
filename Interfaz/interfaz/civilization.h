@@ -4,6 +4,8 @@
 #include <list>
 #include "villager.h"
 #include "ship.h"
+#include <queue>
+
 using namespace std;
 
 class Civilization
@@ -13,6 +15,7 @@ class Civilization
     int y;
     list<Villager> villagers;
     list<Ship*> port;
+    priority_queue<Ship*, vector<Ship*>, Ship::comp> battle;
 
 public:
     Civilization();
@@ -37,6 +40,7 @@ public:
     void sort_villagers_age();
     void sort_villagers_health();
     size_t villager_size();
+
     void save();
 
     Villager operator[](size_t n) {
@@ -59,6 +63,14 @@ public:
     bool shipExists(string &id) const;
     bool deleteShip(string &id);
     bool deleteShip(double fuel);
+
+    void addShipBattle(Ship *ship);
+    Ship* getBattleShip();
+    void returnShip();
+    size_t battlefieldSize();
+    priority_queue<Ship*, vector<Ship*>, Ship::comp> getBattlefield();
+    void softDeleteShip(string &id);
+
 };
 
 #endif // CIVILIZACION_H

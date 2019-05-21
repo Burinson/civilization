@@ -496,8 +496,6 @@ void MainWindow::on_lastWarrior_clicked()
     } else
         QMessageBox::information(this, "Error", "Civilization not found");
     }
-
-
 }
 
 /**
@@ -557,6 +555,83 @@ void MainWindow::on_ship_fuel_delete_button_clicked()
             QMessageBox::information(this, "Error", "There are no ships with less fuel than this");
         } else {
             qDebug() << "[✔]" << "Ship deleted";
+        }
+
+    } else
+        QMessageBox::information(this, "Error", "Civilization not found");
+}
+
+
+
+/**
+ * Add ships to battlefield
+ */
+void MainWindow::on_add_ships_battle_clicked()
+{
+    if (flag) {
+        Civilization* c = videogame.searchCivilization(ui->civilization_search_input->text().toStdString());
+
+        double speed = ui->speed_battle_ship_add->value();
+        string id = ui->id_battle_ship_add->text().toStdString();
+
+        Ship *s = c->getShip(id);
+
+        if (s->getFuel() <= 0)
+            QMessageBox::information(this, "Error", "This ship has no fuel");
+        else {
+            s->setSpeed(speed);
+            c->addShipBattle(s);
+
+            qDebug() << "[✔]" << "Added ship to battle";
+        }
+
+
+    } else
+        QMessageBox::information(this, "Error", "Civilization not found");
+}
+
+/**
+ * Send ships from battlefield to port
+ */
+
+void MainWindow::on_battle_remove_ship_clicked()
+{
+    if (flag) {
+        Civilization* c = videogame.searchCivilization(ui->civilization_search_input->text().toStdString());
+
+        double shield = ui->shield_battle_remove->value();
+        double fuel = ui->fuel_battle_remove->value();
+
+        Ship *s = c->getBattleShip();
+        s->setSpeed(0.0);
+        s->setShield(shield);
+        s->setFuel(fuel);
+
+        c->returnShip();
+
+        qDebug() << "[✔]" << "Removed ship from battlefield";
+
+    } else
+        QMessageBox::information(this, "Error", "Civilization not found");
+}
+
+/**
+ * Show battlefield
+ */
+
+void MainWindow::on_show_battlefield_clicked()
+{
+    if (flag) {
+
+        Civilization* c = videogame.searchCivilization(ui->civilization_search_input->text().toStdString());
+
+        if (c->battlefieldSize() == 0) {
+            QMessageBox::information(this, "Error", "Empty battlefield");
+        } else {
+            battleFieldDisplay.setCivilization(c);
+            battleFieldDisplay.show();
+
+            qDebug() << "[✔]" << "Showing battlefield";
         }
 
     } else

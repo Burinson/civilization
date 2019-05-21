@@ -193,6 +193,81 @@ bool Civilization::deleteShip(double fuel)
     return found;
 }
 
+void Civilization::addShipBattle(Ship *ship)
+{
+    string id = ship->getId();
+    battle.push(ship);
+
+    softDeleteShip(id);
+}
+
+Ship *Civilization::getBattleShip()
+{
+    return battle.top();
+}
+
+void Civilization::returnShip()
+{
+    Ship *ship = battle.top();
+    battle.pop();
+
+    if (ship->getShield() > 0 && ship->getFuel() > 0) {
+        addShip(ship);
+    } else {
+        string id = ship->getId();
+        deleteShip(id);
+    }
+
+
+    priority_queue<Ship*, vector<Ship*>, Ship::comp> copy = battle;
+    priority_queue<Ship*, vector<Ship*>, Ship::comp> survivors;
+
+    //damage
+    while(!copy.empty()) {
+        Ship *target = copy.top();
+        target->setShield(target->getShield() - 10);
+        target->setFuel(target->getFuel() - 15);
+        copy.pop();
+    }
+
+    copy = battle;
+
+    while(!copy.empty()) {
+        Ship *temp = copy.top();
+        if(temp->getShield() > 0 && temp->getFuel() > 0)
+            survivors.push(temp);
+        copy.pop();
+    }
+
+    battle = survivors;
+
+}
+
+size_t Civilization::battlefieldSize()
+{
+    return battle.size();
+}
+
+priority_queue<Ship*, vector<Ship*>, Ship::comp> Civilization::getBattlefield()
+{
+    return battle;
+}
+
+void Civilization::softDeleteShip(string &id)
+{
+    for(size_t i(0); i < shipSize(); ++i) {
+        auto it = port.begin();
+        advance(it, i);
+        auto x = *it;
+        if (x->getId() == id) {
+            port.erase(it);
+            --i;
+        }
+    }
+}
+
+
+
 
 
 Civilization::Civilization()

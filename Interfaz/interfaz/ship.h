@@ -30,6 +30,12 @@ public:
     Warrior top() const;
     size_t size() const;
     stack<Warrior> getWarriors() const;
+
+    struct comp {
+        bool operator()(Ship *s1, Ship *s2) {
+            return s1->getSpeed() < s2->getSpeed();
+        }
+    };
 };
 
 #endif // SHIP_H

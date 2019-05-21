@@ -25,6 +25,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 CONFIG += c++11
 
 SOURCES += \
+    battlefielddisplay.cpp \
         main.cpp \
         mainwindow.cpp \
     civilization.cpp \
@@ -38,6 +39,7 @@ SOURCES += \
     warriordisplay.cpp
 
 HEADERS += \
+    battlefielddisplay.h \
         mainwindow.h \
     civilization.h \
     ship.h \
@@ -50,6 +52,7 @@ HEADERS += \
     warriordisplay.h
 
 FORMS += \
+    battlefielddisplay.ui \
         mainwindow.ui \
     shipdisplay.ui \
     table.ui \

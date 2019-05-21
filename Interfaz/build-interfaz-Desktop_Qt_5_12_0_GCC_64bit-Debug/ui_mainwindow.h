@@ -90,6 +90,7 @@ public:
     QGridLayout *gridLayout_10;
     QLineEdit *civilization_search_input;
     QLabel *label_11;
+    QPushButton *search_civilization_input;
     QTabWidget *tabWidget_3;
     QWidget *tab_19;
     QGridLayout *gridLayout_20;
@@ -184,7 +185,26 @@ public:
     QLabel *label_27;
     QDoubleSpinBox *ship_fuel_delete;
     QPushButton *ship_fuel_delete_button;
-    QPushButton *search_civilization_input;
+    QWidget *tab_31;
+    QGridLayout *gridLayout_32;
+    QTabWidget *tabWidget_7;
+    QWidget *tab_32;
+    QGridLayout *gridLayout_33;
+    QLabel *label_28;
+    QLineEdit *id_battle_ship_add;
+    QLabel *label_29;
+    QDoubleSpinBox *speed_battle_ship_add;
+    QPushButton *add_ships_battle;
+    QWidget *tab_33;
+    QGridLayout *gridLayout_34;
+    QLabel *label_30;
+    QDoubleSpinBox *shield_battle_remove;
+    QLabel *label_31;
+    QDoubleSpinBox *fuel_battle_remove;
+    QPushButton *battle_remove_ship;
+    QWidget *tab_34;
+    QGridLayout *gridLayout_35;
+    QPushButton *show_battlefield;
     QWidget *tab_17;
     QGridLayout *gridLayout_18;
     QPushButton *save_input;
@@ -200,7 +220,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(915, 554);
+        MainWindow->resize(915, 559);
         actionType_here = new QAction(MainWindow);
         actionType_here->setObjectName(QString::fromUtf8("actionType_here"));
         actionFile = new QAction(MainWindow);
@@ -450,6 +470,11 @@ public:
         label_11->setObjectName(QString::fromUtf8("label_11"));
 
         gridLayout_10->addWidget(label_11, 0, 0, 1, 1);
+
+        search_civilization_input = new QPushButton(tab_9);
+        search_civilization_input->setObjectName(QString::fromUtf8("search_civilization_input"));
+
+        gridLayout_10->addWidget(search_civilization_input, 1, 1, 1, 1);
 
         tabWidget_3 = new QTabWidget(tab_9);
         tabWidget_3->setObjectName(QString::fromUtf8("tabWidget_3"));
@@ -871,13 +896,96 @@ public:
         gridLayout_21->addWidget(tabWidget_4, 0, 0, 1, 1);
 
         tabWidget_3->addTab(tab_20, QString());
+        tab_31 = new QWidget();
+        tab_31->setObjectName(QString::fromUtf8("tab_31"));
+        gridLayout_32 = new QGridLayout(tab_31);
+        gridLayout_32->setSpacing(6);
+        gridLayout_32->setContentsMargins(11, 11, 11, 11);
+        gridLayout_32->setObjectName(QString::fromUtf8("gridLayout_32"));
+        tabWidget_7 = new QTabWidget(tab_31);
+        tabWidget_7->setObjectName(QString::fromUtf8("tabWidget_7"));
+        tab_32 = new QWidget();
+        tab_32->setObjectName(QString::fromUtf8("tab_32"));
+        gridLayout_33 = new QGridLayout(tab_32);
+        gridLayout_33->setSpacing(6);
+        gridLayout_33->setContentsMargins(11, 11, 11, 11);
+        gridLayout_33->setObjectName(QString::fromUtf8("gridLayout_33"));
+        label_28 = new QLabel(tab_32);
+        label_28->setObjectName(QString::fromUtf8("label_28"));
+
+        gridLayout_33->addWidget(label_28, 0, 0, 1, 1);
+
+        id_battle_ship_add = new QLineEdit(tab_32);
+        id_battle_ship_add->setObjectName(QString::fromUtf8("id_battle_ship_add"));
+
+        gridLayout_33->addWidget(id_battle_ship_add, 0, 1, 1, 1);
+
+        label_29 = new QLabel(tab_32);
+        label_29->setObjectName(QString::fromUtf8("label_29"));
+
+        gridLayout_33->addWidget(label_29, 1, 0, 1, 1);
+
+        speed_battle_ship_add = new QDoubleSpinBox(tab_32);
+        speed_battle_ship_add->setObjectName(QString::fromUtf8("speed_battle_ship_add"));
+
+        gridLayout_33->addWidget(speed_battle_ship_add, 1, 1, 1, 1);
+
+        add_ships_battle = new QPushButton(tab_32);
+        add_ships_battle->setObjectName(QString::fromUtf8("add_ships_battle"));
+
+        gridLayout_33->addWidget(add_ships_battle, 2, 1, 1, 1);
+
+        tabWidget_7->addTab(tab_32, QString());
+        tab_33 = new QWidget();
+        tab_33->setObjectName(QString::fromUtf8("tab_33"));
+        gridLayout_34 = new QGridLayout(tab_33);
+        gridLayout_34->setSpacing(6);
+        gridLayout_34->setContentsMargins(11, 11, 11, 11);
+        gridLayout_34->setObjectName(QString::fromUtf8("gridLayout_34"));
+        label_30 = new QLabel(tab_33);
+        label_30->setObjectName(QString::fromUtf8("label_30"));
+
+        gridLayout_34->addWidget(label_30, 0, 0, 1, 1);
+
+        shield_battle_remove = new QDoubleSpinBox(tab_33);
+        shield_battle_remove->setObjectName(QString::fromUtf8("shield_battle_remove"));
+
+        gridLayout_34->addWidget(shield_battle_remove, 0, 1, 1, 1);
+
+        label_31 = new QLabel(tab_33);
+        label_31->setObjectName(QString::fromUtf8("label_31"));
+
+        gridLayout_34->addWidget(label_31, 1, 0, 1, 1);
+
+        fuel_battle_remove = new QDoubleSpinBox(tab_33);
+        fuel_battle_remove->setObjectName(QString::fromUtf8("fuel_battle_remove"));
+
+        gridLayout_34->addWidget(fuel_battle_remove, 1, 1, 1, 1);
+
+        battle_remove_ship = new QPushButton(tab_33);
+        battle_remove_ship->setObjectName(QString::fromUtf8("battle_remove_ship"));
+
+        gridLayout_34->addWidget(battle_remove_ship, 2, 0, 1, 3);
+
+        tabWidget_7->addTab(tab_33, QString());
+        tab_34 = new QWidget();
+        tab_34->setObjectName(QString::fromUtf8("tab_34"));
+        gridLayout_35 = new QGridLayout(tab_34);
+        gridLayout_35->setSpacing(6);
+        gridLayout_35->setContentsMargins(11, 11, 11, 11);
+        gridLayout_35->setObjectName(QString::fromUtf8("gridLayout_35"));
+        show_battlefield = new QPushButton(tab_34);
+        show_battlefield->setObjectName(QString::fromUtf8("show_battlefield"));
+
+        gridLayout_35->addWidget(show_battlefield, 0, 0, 1, 1);
+
+        tabWidget_7->addTab(tab_34, QString());
+
+        gridLayout_32->addWidget(tabWidget_7, 0, 0, 1, 1);
+
+        tabWidget_3->addTab(tab_31, QString());
 
         gridLayout_10->addWidget(tabWidget_3, 2, 1, 1, 1);
-
-        search_civilization_input = new QPushButton(tab_9);
-        search_civilization_input->setObjectName(QString::fromUtf8("search_civilization_input"));
-
-        gridLayout_10->addWidget(search_civilization_input, 1, 1, 1, 1);
 
         tabWidget->addTab(tab_9, QString());
         tab_17 = new QWidget();
@@ -929,12 +1037,13 @@ public:
         retranslateUi(MainWindow);
 
         tabWidget->setCurrentIndex(8);
-        tabWidget_3->setCurrentIndex(1);
+        tabWidget_3->setCurrentIndex(2);
         menu_options->setCurrentIndex(0);
         tabWidget_2->setCurrentIndex(2);
-        tabWidget_4->setCurrentIndex(3);
+        tabWidget_4->setCurrentIndex(0);
         tabWidget_6->setCurrentIndex(3);
         tabWidget_5->setCurrentIndex(0);
+        tabWidget_7->setCurrentIndex(2);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -974,6 +1083,7 @@ public:
         summary_submit->setText(QApplication::translate("MainWindow", "See summary", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(tab_8), QApplication::translate("MainWindow", "Summary", nullptr));
         label_11->setText(QApplication::translate("MainWindow", "Civilization name", nullptr));
+        search_civilization_input->setText(QApplication::translate("MainWindow", "Search", nullptr));
         label_12->setText(QApplication::translate("MainWindow", "Name", nullptr));
         label_13->setText(QApplication::translate("MainWindow", "Age", nullptr));
         label_14->setText(QApplication::translate("MainWindow", "Gender", nullptr));
@@ -1031,7 +1141,17 @@ public:
         tabWidget_5->setTabText(tabWidget_5->indexOf(tab_26), QApplication::translate("MainWindow", "By fuel", nullptr));
         tabWidget_4->setTabText(tabWidget_4->indexOf(tab_24), QApplication::translate("MainWindow", "Delete ships", nullptr));
         tabWidget_3->setTabText(tabWidget_3->indexOf(tab_20), QApplication::translate("MainWindow", "Ships", nullptr));
-        search_civilization_input->setText(QApplication::translate("MainWindow", "Search", nullptr));
+        label_28->setText(QApplication::translate("MainWindow", "ID:", nullptr));
+        label_29->setText(QApplication::translate("MainWindow", "Speed", nullptr));
+        add_ships_battle->setText(QApplication::translate("MainWindow", "Add ship to battle", nullptr));
+        tabWidget_7->setTabText(tabWidget_7->indexOf(tab_32), QApplication::translate("MainWindow", "Add ship", nullptr));
+        label_30->setText(QApplication::translate("MainWindow", "Shield", nullptr));
+        label_31->setText(QApplication::translate("MainWindow", "Fuel", nullptr));
+        battle_remove_ship->setText(QApplication::translate("MainWindow", "Remove fastest ship", nullptr));
+        tabWidget_7->setTabText(tabWidget_7->indexOf(tab_33), QApplication::translate("MainWindow", "Remove ship", nullptr));
+        show_battlefield->setText(QApplication::translate("MainWindow", "Show battlefield", nullptr));
+        tabWidget_7->setTabText(tabWidget_7->indexOf(tab_34), QApplication::translate("MainWindow", "Show ships", nullptr));
+        tabWidget_3->setTabText(tabWidget_3->indexOf(tab_31), QApplication::translate("MainWindow", "Battle", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(tab_9), QApplication::translate("MainWindow", "Search", nullptr));
         save_input->setText(QApplication::translate("MainWindow", "Save civilizations", nullptr));
         tabWidget->setTabText(tabWidget->indexOf(tab_17), QApplication::translate("MainWindow", "Save", nullptr));

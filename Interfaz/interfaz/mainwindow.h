@@ -7,6 +7,7 @@
 #include "villagerdisplay.h"
 #include "shipdisplay.h"
 #include "warriordisplay.h"
+#include "battlefielddisplay.h"
 
 namespace Ui {
 class MainWindow;
@@ -77,6 +78,12 @@ private slots:
 
     void on_ship_fuel_delete_button_clicked();
 
+    void on_add_ships_battle_clicked();
+
+    void on_battle_remove_ship_clicked();
+
+    void on_show_battlefield_clicked();
+
 private:
     Ui::MainWindow *ui;
     VideoGame videogame;
@@ -84,6 +91,7 @@ private:
     villagerdisplay villagerDisplay;
     ShipDisplay shipdisplay;
     WarriorDisplay warriordisplay;
+    battlefielddisplay battleFieldDisplay;
     bool flag = false;
 };
 

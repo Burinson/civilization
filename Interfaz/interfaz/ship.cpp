@@ -69,4 +69,5 @@ Ship::Ship()
 {
     this->speed = 0;
     this->shield = 100;
+    this->id = "_";
 }
